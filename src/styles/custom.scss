@@ -1,0 +1,582 @@
+// ── Nouvela Technology Group — custom Bootstrap overrides ─────────────────────
+
+// Color tokens
+$nt-dark:        #0a0a14;
+$nt-dark-card:   #12121f;
+$nt-dark-border: #1e1e35;
+$nt-purple:      #7c3aed;
+$nt-purple-light:#a78bfa;
+$nt-cyan:        #22d3ee;
+$nt-gold:        #f59e0b;
+$nt-text:        #e2e8f0;
+$nt-muted:       #94a3b8;
+
+// Bootstrap variable overrides (must come before import)
+$primary:         $nt-purple;
+$secondary:       $nt-cyan;
+$body-bg:         $nt-dark;
+$body-color:      $nt-text;
+$font-family-base: 'Inter', 'Segoe UI', system-ui, sans-serif;
+$border-radius:   0.5rem;
+$border-radius-lg: 0.75rem;
+
+@import 'bootstrap/scss/bootstrap';
+
+// ── Global ────────────────────────────────────────────────────────────────────
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: $nt-dark;
+  color: $nt-text;
+  overflow-x: hidden;
+}
+
+// ── Utility ───────────────────────────────────────────────────────────────────
+.text-muted-nt   { color: $nt-muted !important; }
+.text-purple     { color: $nt-purple !important; }
+.text-cyan       { color: $nt-cyan !important; }
+.text-gold       { color: $nt-gold !important; }
+
+.bg-card         { background: $nt-dark-card !important; }
+.border-nt       { border: 1px solid $nt-dark-border !important; }
+
+.gradient-text {
+  background: linear-gradient(135deg, $nt-purple-light 0%, $nt-cyan 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+// ── Buttons ───────────────────────────────────────────────────────────────────
+.btn-nt-primary {
+  background: $nt-purple;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.65rem 1.75rem;
+  border-radius: 0.5rem;
+  transition: background 0.2s, transform 0.15s;
+
+  &:hover {
+    background: darken($nt-purple, 8%);
+    color: #fff;
+    transform: translateY(-1px);
+  }
+}
+
+.btn-nt-outline {
+  background: transparent;
+  border: 2px solid $nt-purple;
+  color: $nt-purple-light;
+  font-weight: 600;
+  padding: 0.6rem 1.6rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+
+  &:hover {
+    background: $nt-purple;
+    color: #fff;
+  }
+}
+
+// ── Navbar ────────────────────────────────────────────────────────────────────
+.nt-navbar {
+  background: rgba(10, 10, 20, 0.92) !important;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid $nt-dark-border;
+  padding: 0.75rem 0;
+  transition: background 0.3s;
+
+  .navbar-brand {
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #fff !important;
+
+    span { color: $nt-purple; }
+  }
+
+  .nav-link {
+    color: $nt-muted !important;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.85rem !important;
+    transition: color 0.2s;
+
+    &:hover, &.active { color: #fff !important; }
+  }
+
+  .navbar-toggler {
+    border-color: rgba(255,255,255,0.3);
+  }
+  .navbar-toggler-icon { filter: invert(1); }
+
+  .navbar-collapse {
+    @media (max-width: 991px) {
+      background: rgba(10,10,20,0.97);
+      padding: 1rem;
+      border-radius: 0.5rem;
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+// ── Hero ─────────────────────────────────────────────────────────────────────
+.nt-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(124, 58, 237, 0.25) 0%, transparent 70%),
+    $nt-dark;
+  padding: 6rem 0 4rem;
+
+  .hero-badge {
+    display: inline-block;
+    background: rgba(124,58,237,0.15);
+    border: 1px solid rgba(124,58,237,0.4);
+    color: $nt-purple-light;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.9rem;
+    border-radius: 99px;
+    margin-bottom: 1.25rem;
+  }
+
+  h1 {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-sub {
+    font-size: 1.1rem;
+    color: $nt-muted;
+    max-width: 500px;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid $nt-dark-border;
+    flex-wrap: wrap;
+
+    .stat {
+      .stat-value {
+        font-size: 1.75rem;
+        font-weight: 800;
+        color: #fff;
+        line-height: 1;
+      }
+      .stat-label {
+        font-size: 0.8rem;
+        color: $nt-muted;
+        margin-top: 0.25rem;
+      }
+    }
+  }
+
+  .hero-visual {
+    background: $nt-dark-card;
+    border: 1px solid $nt-dark-border;
+    border-radius: 1rem;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(124,58,237,0.2) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .code-block {
+      font-family: 'Fira Code', 'Courier New', monospace;
+      font-size: 0.82rem;
+      line-height: 1.8;
+      color: $nt-text;
+
+      .kw  { color: $nt-purple-light; }
+      .fn  { color: $nt-cyan; }
+      .str { color: #86efac; }
+      .cmt { color: $nt-muted; font-style: italic; }
+    }
+
+    .visual-footer {
+      margin-top: 1.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid $nt-dark-border;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+
+      .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        &.green  { background: #4ade80; }
+        &.yellow { background: $nt-gold; }
+        &.red    { background: #f87171; }
+      }
+      span { font-size: 0.78rem; color: $nt-muted; margin-left: auto; }
+    }
+  }
+}
+
+// ── Services ──────────────────────────────────────────────────────────────────
+.nt-services {
+  padding: 5rem 0;
+  background: $nt-dark;
+
+  .section-eyebrow {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $nt-purple-light;
+    margin-bottom: 0.75rem;
+  }
+
+  .service-card {
+    background: $nt-dark-card;
+    border: 1px solid $nt-dark-border;
+    border-radius: 0.75rem;
+    padding: 1.75rem;
+    height: 100%;
+    transition: border-color 0.2s, transform 0.2s;
+
+    &:hover {
+      border-color: $nt-purple;
+      transform: translateY(-3px);
+    }
+
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 0.6rem;
+      background: rgba(124,58,237,0.12);
+      border: 1px solid rgba(124,58,237,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 1.1rem;
+    }
+
+    h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 0.88rem;
+      color: $nt-muted;
+      line-height: 1.6;
+      margin: 0;
+    }
+  }
+}
+
+// ── Portfolio ─────────────────────────────────────────────────────────────────
+.nt-portfolio {
+  padding: 5rem 0;
+  background: linear-gradient(180deg, $nt-dark 0%, $nt-dark-card 100%);
+
+  .portfolio-card {
+    background: $nt-dark;
+    border: 1px solid $nt-dark-border;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: border-color 0.2s, transform 0.2s;
+
+    &:hover {
+      border-color: $nt-purple;
+      transform: translateY(-4px);
+
+      .preview-overlay { opacity: 1; }
+    }
+
+    .preview-wrap {
+      position: relative;
+      background: $nt-dark-card;
+      aspect-ratio: 16/9;
+      overflow: hidden;
+
+      iframe {
+        width: 166.67%;
+        height: 166.67%;
+        transform: scale(0.6);
+        transform-origin: top left;
+        pointer-events: none;
+        border: none;
+      }
+
+      .preview-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(124,58,237,0.15);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.2s;
+
+        a {
+          background: $nt-purple;
+          color: #fff;
+          padding: 0.5rem 1.25rem;
+          border-radius: 0.5rem;
+          font-size: 0.85rem;
+          font-weight: 600;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .card-body {
+      padding: 1.5rem;
+
+      .tag {
+        display: inline-block;
+        background: rgba(124,58,237,0.12);
+        border: 1px solid rgba(124,58,237,0.25);
+        color: $nt-purple-light;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        padding: 0.2rem 0.6rem;
+        border-radius: 99px;
+        margin-right: 0.35rem;
+        margin-bottom: 0.35rem;
+      }
+
+      h4 {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #fff;
+        margin: 0.75rem 0 0.35rem;
+      }
+
+      p {
+        font-size: 0.85rem;
+        color: $nt-muted;
+        margin: 0;
+        line-height: 1.55;
+      }
+
+      .card-footer-nt {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid $nt-dark-border;
+
+        .status-dot {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.4rem;
+          font-size: 0.78rem;
+          color: $nt-muted;
+
+          &::before {
+            content: '';
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #4ade80;
+          }
+
+          &.planning::before { background: $nt-gold; }
+        }
+
+        a {
+          color: $nt-purple-light;
+          font-size: 0.82rem;
+          font-weight: 600;
+          text-decoration: none;
+
+          &:hover { color: #fff; }
+        }
+      }
+    }
+  }
+}
+
+// ── About ─────────────────────────────────────────────────────────────────────
+.nt-about {
+  padding: 5rem 0;
+  background: $nt-dark;
+
+  .about-feature {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+
+    .icon-wrap {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 0.5rem;
+      background: rgba(124,58,237,0.12);
+      border: 1px solid rgba(124,58,237,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+
+    .text h5 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.2rem;
+    }
+    .text p {
+      font-size: 0.85rem;
+      color: $nt-muted;
+      margin: 0;
+      line-height: 1.55;
+    }
+  }
+}
+
+// ── Contact ───────────────────────────────────────────────────────────────────
+.nt-contact {
+  padding: 5rem 0;
+  background: $nt-dark-card;
+  border-top: 1px solid $nt-dark-border;
+
+  .contact-card {
+    background: $nt-dark;
+    border: 1px solid $nt-dark-border;
+    border-radius: 1rem;
+    padding: 2.5rem;
+
+    label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: $nt-text;
+      margin-bottom: 0.4rem;
+    }
+
+    .form-control, .form-select {
+      background: $nt-dark-card;
+      border: 1px solid $nt-dark-border;
+      color: $nt-text;
+      border-radius: 0.5rem;
+      font-size: 0.9rem;
+
+      &::placeholder { color: $nt-muted; }
+      &:focus {
+        background: $nt-dark-card;
+        border-color: $nt-purple;
+        color: $nt-text;
+        box-shadow: 0 0 0 3px rgba(124,58,237,0.15);
+      }
+    }
+  }
+
+  .contact-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+
+    .ci-icon {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+      background: rgba(124,58,237,0.12);
+      border: 1px solid rgba(124,58,237,0.25);
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+    }
+
+    .ci-text {
+      p { margin: 0; font-size: 0.85rem; color: $nt-muted; }
+      a, strong { color: #fff; font-size: 0.95rem; font-weight: 600; text-decoration: none; }
+    }
+  }
+}
+
+// ── Footer ────────────────────────────────────────────────────────────────────
+.nt-footer {
+  background: #060610;
+  border-top: 1px solid $nt-dark-border;
+  padding: 3rem 0 1.5rem;
+
+  .brand-col {
+    .footer-brand {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #fff;
+      span { color: $nt-purple; }
+    }
+    p {
+      font-size: 0.82rem;
+      color: $nt-muted;
+      line-height: 1.6;
+      margin-top: 0.6rem;
+      max-width: 220px;
+    }
+  }
+
+  h6 {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $nt-muted;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li { margin-bottom: 0.5rem; }
+    a {
+      color: $nt-muted;
+      font-size: 0.85rem;
+      text-decoration: none;
+      transition: color 0.2s;
+      &:hover { color: #fff; }
+    }
+  }
+
+  .footer-bottom {
+    margin-top: 2.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid $nt-dark-border;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    p { font-size: 0.78rem; color: $nt-muted; margin: 0; }
+  }
+}
