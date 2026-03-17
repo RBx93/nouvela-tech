@@ -6,31 +6,32 @@ function Hero() {
       <Container>
         <Row className="align-items-center g-5">
           <Col lg={6}>
-            <div className="hero-badge">Web · Mobile · Business Growth</div>
+            <div className="hero-badge">Technology. Operations. Impact.</div>
             <h1>
-              We Build Websites That <span className="gradient-text">Work For You</span>
+              Practical Solutions. <span className="gradient-text">Real-World Results.</span>
             </h1>
             <p className="hero-sub">
-              Nouvela Technology Group crafts fast, modern websites for small businesses —
-              from local service providers to community organizations. Clean code, real results.
+              Nouvela Technology Group LLC delivers high-value solutions across software engineering,
+              administrative support, geospatial services, and program management — helping organizations
+              improve operations and support mission success.
             </p>
             <div className="d-flex gap-3 flex-wrap">
-              <a href="#portfolio" className="btn-nt-primary text-decoration-none">See Our Work</a>
-              <a href="#contact" className="btn-nt-outline text-decoration-none">Start a Project</a>
+              <a href="#govcon" className="btn-nt-primary text-decoration-none">Government Contracting</a>
+              <a href="#contact" className="btn-nt-outline text-decoration-none">Get in Touch</a>
             </div>
 
             <div className="hero-stats">
               <div className="stat">
-                <div className="stat-value">4+</div>
-                <div className="stat-label">Projects Built</div>
+                <div className="stat-value">SAM</div>
+                <div className="stat-label">Active Registrant</div>
               </div>
               <div className="stat">
-                <div className="stat-value">100%</div>
-                <div className="stat-label">Client Satisfaction</div>
+                <div className="stat-value">SBA</div>
+                <div className="stat-label">Small Business</div>
               </div>
               <div className="stat">
-                <div className="stat-value">3</div>
-                <div className="stat-label">Live Sites</div>
+                <div className="stat-value">5+</div>
+                <div className="stat-label">Service Areas</div>
               </div>
             </div>
           </Col>
@@ -38,25 +39,24 @@ function Hero() {
           <Col lg={6}>
             <div className="hero-visual">
               <div className="code-block">
-                <div><span className="cmt">// Nouvela Technology Group</span></div>
-                <div><span className="kw">const</span> <span className="fn">buildYourBusiness</span> = () =&gt; &#123;</div>
-                <div>&nbsp;&nbsp;<span className="kw">return</span> &#123;</div>
-                <div>&nbsp;&nbsp;&nbsp;&nbsp;design: <span className="str">'modern &amp; clean'</span>,</div>
-                <div>&nbsp;&nbsp;&nbsp;&nbsp;performance: <span className="str">'blazing fast'</span>,</div>
-                <div>&nbsp;&nbsp;&nbsp;&nbsp;seo: <span className="str">'built-in'</span>,</div>
-                <div>&nbsp;&nbsp;&nbsp;&nbsp;support: <span className="str">'ongoing'</span>,</div>
-                <div>&nbsp;&nbsp;&#125;</div>
+                <div><span className="cmt">// Nouvela Technology Group LLC</span></div>
+                <div><span className="kw">const</span> <span className="fn">mission</span> = &#123;</div>
+                <div>&nbsp;&nbsp;focus: <span className="str">'technology + operations'</span>,</div>
+                <div>&nbsp;&nbsp;delivery: <span className="str">'practical + scalable'</span>,</div>
+                <div>&nbsp;&nbsp;clients: <span className="str">'gov + commercial'</span>,</div>
+                <div>&nbsp;&nbsp;ai_ready: <span className="kw">true</span>,</div>
+                <div>&nbsp;&nbsp;registered: <span className="str">'SAM.gov active'</span>,</div>
                 <div>&#125;</div>
                 <div style={{ marginTop: '0.75rem' }}>
-                  <span className="fn">buildYourBusiness</span>()
-                  &nbsp;<span className="cmt">// ✓ deployed</span>
+                  <span className="fn">mission</span>.execute()
+                  &nbsp;<span className="cmt">// ✓ impact delivered</span>
                 </div>
               </div>
               <div className="visual-footer">
                 <div className="dot red" />
                 <div className="dot yellow" />
                 <div className="dot green" />
-                <span>nouvela.dev — live</span>
+                <span>nouvela.tech — active</span>
               </div>
             </div>
           </Col>

@@ -1,19 +1,20 @@
 // ── Nouvela Technology Group — custom Bootstrap overrides ─────────────────────
 
-// Color tokens
-$nt-dark:        #0a0a14;
-$nt-dark-card:   #12121f;
-$nt-dark-border: #1e1e35;
-$nt-purple:      #7c3aed;
-$nt-purple-light:#a78bfa;
-$nt-cyan:        #22d3ee;
+// Color tokens — matched to Nouvela logo (navy blue + red circuit)
+$nt-dark:        #06101e;
+$nt-dark-card:   #0d1a2e;
+$nt-dark-border: #1a2d4a;
+$nt-navy:        #1a3570;
+$nt-blue:        #2563eb;
+$nt-blue-light:  #60a5fa;
+$nt-red:         #d63031;
 $nt-gold:        #f59e0b;
 $nt-text:        #e2e8f0;
 $nt-muted:       #94a3b8;
 
 // Bootstrap variable overrides (must come before import)
-$primary:         $nt-purple;
-$secondary:       $nt-cyan;
+$primary:         $nt-blue;
+$secondary:       $nt-red;
 $body-bg:         $nt-dark;
 $body-color:      $nt-text;
 $font-family-base: 'Inter', 'Segoe UI', system-ui, sans-serif;
@@ -35,15 +36,15 @@ body {
 
 // ── Utility ───────────────────────────────────────────────────────────────────
 .text-muted-nt   { color: $nt-muted !important; }
-.text-purple     { color: $nt-purple !important; }
-.text-cyan       { color: $nt-cyan !important; }
+.text-blue       { color: $nt-blue !important; }
+.text-red        { color: $nt-red !important; }
 .text-gold       { color: $nt-gold !important; }
 
 .bg-card         { background: $nt-dark-card !important; }
 .border-nt       { border: 1px solid $nt-dark-border !important; }
 
 .gradient-text {
-  background: linear-gradient(135deg, $nt-purple-light 0%, $nt-cyan 100%);
+  background: linear-gradient(135deg, $nt-blue-light 0%, $nt-red 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -51,7 +52,7 @@ body {
 
 // ── Buttons ───────────────────────────────────────────────────────────────────
 .btn-nt-primary {
-  background: $nt-purple;
+  background: $nt-blue;
   border: none;
   color: #fff;
   font-weight: 600;
@@ -60,7 +61,7 @@ body {
   transition: background 0.2s, transform 0.15s;
 
   &:hover {
-    background: darken($nt-purple, 8%);
+    background: darken($nt-blue, 8%);
     color: #fff;
     transform: translateY(-1px);
   }
@@ -68,34 +69,49 @@ body {
 
 .btn-nt-outline {
   background: transparent;
-  border: 2px solid $nt-purple;
-  color: $nt-purple-light;
+  border: 2px solid $nt-blue;
+  color: $nt-blue-light;
   font-weight: 600;
   padding: 0.6rem 1.6rem;
   border-radius: 0.5rem;
   transition: all 0.2s;
 
   &:hover {
-    background: $nt-purple;
+    background: $nt-blue;
     color: #fff;
   }
 }
 
 // ── Navbar ────────────────────────────────────────────────────────────────────
 .nt-navbar {
-  background: rgba(10, 10, 20, 0.92) !important;
+  background: rgba(6, 16, 30, 0.94) !important;
   backdrop-filter: blur(12px);
   border-bottom: 1px solid $nt-dark-border;
-  padding: 0.75rem 0;
+  padding: 0.15rem 0;
   transition: background 0.3s;
 
   .navbar-brand {
-    font-size: 1.25rem;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    color: #fff !important;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
 
-    span { color: $nt-purple; }
+    .navbar-logo-icon {
+      height: 90px;
+      width: auto;
+    }
+
+    .navbar-brand-text {
+      font-size: 1.1rem;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      color: #fff;
+      line-height: 1.2;
+      text-align: left;
+
+      .brand-sub {
+        color: $nt-blue-light;
+      }
+    }
   }
 
   .nav-link {
@@ -115,7 +131,7 @@ body {
 
   .navbar-collapse {
     @media (max-width: 991px) {
-      background: rgba(10,10,20,0.97);
+      background: rgba(6,16,30,0.97);
       padding: 1rem;
       border-radius: 0.5rem;
       margin-top: 0.5rem;
@@ -129,15 +145,15 @@ body {
   display: flex;
   align-items: center;
   background:
-    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(124, 58, 237, 0.25) 0%, transparent 70%),
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(37, 99, 235, 0.2) 0%, transparent 70%),
     $nt-dark;
   padding: 6rem 0 4rem;
 
   .hero-badge {
     display: inline-block;
-    background: rgba(124,58,237,0.15);
-    border: 1px solid rgba(124,58,237,0.4);
-    color: $nt-purple-light;
+    background: rgba(37,99,235,0.15);
+    border: 1px solid rgba(37,99,235,0.4);
+    color: $nt-blue-light;
     font-size: 0.78rem;
     font-weight: 600;
     letter-spacing: 0.08em;
@@ -201,7 +217,7 @@ body {
       right: -40px;
       width: 200px;
       height: 200px;
-      background: radial-gradient(circle, rgba(124,58,237,0.2) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(37,99,235,0.2) 0%, transparent 70%);
       border-radius: 50%;
     }
 
@@ -211,8 +227,8 @@ body {
       line-height: 1.8;
       color: $nt-text;
 
-      .kw  { color: $nt-purple-light; }
-      .fn  { color: $nt-cyan; }
+      .kw  { color: $nt-blue-light; }
+      .fn  { color: $nt-red; }
       .str { color: #86efac; }
       .cmt { color: $nt-muted; font-style: italic; }
     }
@@ -248,7 +264,7 @@ body {
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: $nt-purple-light;
+    color: $nt-blue-light;
     margin-bottom: 0.75rem;
   }
 
@@ -261,7 +277,7 @@ body {
     transition: border-color 0.2s, transform 0.2s;
 
     &:hover {
-      border-color: $nt-purple;
+      border-color: $nt-blue;
       transform: translateY(-3px);
     }
 
@@ -269,8 +285,8 @@ body {
       width: 48px;
       height: 48px;
       border-radius: 0.6rem;
-      background: rgba(124,58,237,0.12);
-      border: 1px solid rgba(124,58,237,0.25);
+      background: rgba(37,99,235,0.12);
+      border: 1px solid rgba(37,99,235,0.25);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -307,7 +323,7 @@ body {
     transition: border-color 0.2s, transform 0.2s;
 
     &:hover {
-      border-color: $nt-purple;
+      border-color: $nt-blue;
       transform: translateY(-4px);
 
       .preview-overlay { opacity: 1; }
@@ -331,7 +347,7 @@ body {
       .preview-overlay {
         position: absolute;
         inset: 0;
-        background: rgba(124,58,237,0.15);
+        background: rgba(37,99,235,0.15);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -339,7 +355,7 @@ body {
         transition: opacity 0.2s;
 
         a {
-          background: $nt-purple;
+          background: $nt-blue;
           color: #fff;
           padding: 0.5rem 1.25rem;
           border-radius: 0.5rem;
@@ -355,9 +371,9 @@ body {
 
       .tag {
         display: inline-block;
-        background: rgba(124,58,237,0.12);
-        border: 1px solid rgba(124,58,237,0.25);
-        color: $nt-purple-light;
+        background: rgba(37,99,235,0.12);
+        border: 1px solid rgba(37,99,235,0.25);
+        color: $nt-blue-light;
         font-size: 0.7rem;
         font-weight: 600;
         letter-spacing: 0.06em;
@@ -409,7 +425,7 @@ body {
         }
 
         a {
-          color: $nt-purple-light;
+          color: $nt-blue-light;
           font-size: 0.82rem;
           font-weight: 600;
           text-decoration: none;
@@ -418,6 +434,153 @@ body {
         }
       }
     }
+  }
+}
+
+// ── Government Contracting ────────────────────────────────────────────────────
+.nt-govcon {
+  padding: 5rem 0;
+  background: $nt-dark-card;
+  border-top: 1px solid $nt-dark-border;
+
+  .section-eyebrow {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $nt-blue-light;
+    margin-bottom: 0.75rem;
+  }
+
+  .govcon-credential {
+    background: $nt-dark;
+    border: 1px solid $nt-dark-border;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    text-align: center;
+    transition: border-color 0.2s;
+
+    &:hover { border-color: $nt-blue; }
+
+    .cred-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: $nt-blue-light;
+      margin-bottom: 0.5rem;
+    }
+
+    .cred-value {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #fff;
+      font-family: 'Fira Code', 'Courier New', monospace;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.35rem;
+    }
+
+    .cred-desc {
+      font-size: 0.75rem;
+      color: $nt-muted;
+    }
+  }
+
+  .govcon-subhead {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $nt-muted;
+    margin-bottom: 1.25rem;
+  }
+
+  .naics-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .naics-item {
+    display: flex;
+    flex-direction: column;
+    background: $nt-dark;
+    border: 1px solid $nt-dark-border;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+
+    .naics-code {
+      font-family: 'Fira Code', 'Courier New', monospace;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: $nt-blue-light;
+    }
+
+    .naics-title {
+      font-size: 0.8rem;
+      color: $nt-muted;
+      margin-top: 0.15rem;
+    }
+  }
+
+  .govcon-cap-card {
+    background: $nt-dark;
+    border: 1px solid $nt-dark-border;
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    height: 100%;
+    transition: border-color 0.2s, transform 0.2s;
+
+    &:hover {
+      border-color: $nt-blue;
+      transform: translateY(-2px);
+    }
+
+    .cap-icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    h6 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.4rem;
+    }
+
+    p {
+      font-size: 0.82rem;
+      color: $nt-muted;
+      margin: 0;
+      line-height: 1.6;
+    }
+  }
+}
+
+// ── Capabilities Page ─────────────────────────────────────────────────────────
+.cap-data-row {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid $nt-dark-border;
+
+  &:first-child { border-top: 1px solid $nt-dark-border; }
+
+  .cap-data-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: $nt-muted;
+    letter-spacing: 0.03em;
+    min-width: 180px;
+    flex-shrink: 0;
+  }
+
+  .cap-data-value {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #fff;
+    font-family: 'Fira Code', 'Courier New', monospace;
   }
 }
 
@@ -436,8 +599,8 @@ body {
       width: 40px;
       height: 40px;
       border-radius: 0.5rem;
-      background: rgba(124,58,237,0.12);
-      border: 1px solid rgba(124,58,237,0.25);
+      background: rgba(37,99,235,0.12);
+      border: 1px solid rgba(37,99,235,0.25);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -488,9 +651,9 @@ body {
       &::placeholder { color: $nt-muted; }
       &:focus {
         background: $nt-dark-card;
-        border-color: $nt-purple;
+        border-color: $nt-blue;
         color: $nt-text;
-        box-shadow: 0 0 0 3px rgba(124,58,237,0.15);
+        box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
       }
     }
   }
@@ -505,8 +668,8 @@ body {
       width: 40px;
       height: 40px;
       flex-shrink: 0;
-      background: rgba(124,58,237,0.12);
-      border: 1px solid rgba(124,58,237,0.25);
+      background: rgba(37,99,235,0.12);
+      border: 1px solid rgba(37,99,235,0.25);
       border-radius: 0.5rem;
       display: flex;
       align-items: center;
@@ -523,22 +686,51 @@ body {
 
 // ── Footer ────────────────────────────────────────────────────────────────────
 .nt-footer {
-  background: #060610;
+  background: #030b15;
   border-top: 1px solid $nt-dark-border;
-  padding: 3rem 0 1.5rem;
+  padding: 1.5rem 0 1rem;
+  position: relative;
+  overflow: hidden;
+
+  .footer-bg-logo {
+    position: absolute;
+    width: 600px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.12;
+    pointer-events: none;
+    user-select: none;
+  }
 
   .brand-col {
-    .footer-brand {
-      font-size: 1.1rem;
-      font-weight: 800;
-      color: #fff;
-      span { color: $nt-purple; }
+    .footer-brand-block {
+      position: relative;
+      padding: 1rem 0;
+
+      p {
+        position: relative;
+        z-index: 1;
+      }
+    }
+
+    .footer-shield-overlay {
+      position: absolute;
+      height: 160px;
+      width: auto;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.08;
+      pointer-events: none;
+      user-select: none;
     }
     p {
       font-size: 0.82rem;
       color: $nt-muted;
       line-height: 1.6;
-      margin-top: 0.6rem;
+      margin-top: 0.75rem;
       max-width: 220px;
     }
   }

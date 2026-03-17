@@ -1,28 +1,5 @@
 import { Container, Row, Col } from 'react-bootstrap'
-
-const projects = [
-  {
-    title: "Bassy Handyman Co.",
-    desc: "Full-service handyman website with contact form, gallery, before/after slider, and Google Analytics.",
-    tags: ["React 19", "Bootstrap 5", "EmailJS", "Azure"],
-    url: "https://black-grass-0bd5c040f.6.azurestaticapps.net",
-    status: "live",
-  },
-  {
-    title: "Iota Omega Chapter",
-    desc: "Fraternity chapter site with Firebase admin portal, live event calendar, member database, and photo archives.",
-    tags: ["React 18", "Firebase", "Vercel", "Bootstrap"],
-    url: "https://iotaomega1923.com",
-    status: "live",
-  },
-  {
-    title: "Bryant's Lawn Care Services LLC",
-    desc: "Lawn care service site with quote request form, service showcase, before/after comparisons, and FAQ.",
-    tags: ["React 19", "Bootstrap 5", "SCSS", "Azure"],
-    url: null,
-    status: "In Development",
-  },
-]
+import projects from '../data/projects'
 
 function Portfolio() {
   return (
@@ -30,7 +7,7 @@ function Portfolio() {
       <Container>
         <Row className="mb-5">
           <Col lg={8}>
-            <div className="section-eyebrow" style={{ color: '#a78bfa', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>
+            <div className="section-eyebrow">
               Our Work
             </div>
             <h2 style={{ fontWeight: 800, fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: '#fff' }}>
@@ -67,7 +44,7 @@ function Portfolio() {
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      background: '#12121f',
+                      background: '#0d1a2e',
                       color: '#f59e0b',
                       fontWeight: 600,
                       fontSize: '0.85rem',
