@@ -28,6 +28,10 @@ jobs:
           action: "upload"
           app_location: "/"
           output_location: "dist"
+        env:
+          VITE_EMAILJS_SERVICE_ID: ${{ secrets.VITE_EMAILJS_SERVICE_ID }}
+          VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}
+          VITE_EMAILJS_PUBLIC_KEY: ${{ secrets.VITE_EMAILJS_PUBLIC_KEY }}
 
   close_pull_request:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
