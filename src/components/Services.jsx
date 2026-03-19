@@ -43,7 +43,7 @@ function Services() {
   return (
     <section id="services" className="nt-services">
       <Container>
-        <Row className="mb-5">
+        <Row className="mb-5 fade-up">
           <Col lg={7}>
             <div className="section-eyebrow">What We Do</div>
             <h2 style={{ fontWeight: 800, fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: '#fff' }}>
@@ -58,8 +58,8 @@ function Services() {
 
         <Row className="g-4">
           {services.map((s, i) => (
-            <Col md={6} lg={4} key={i}>
-              <div className="service-card">
+            <Col md={6} lg={4} key={i} className={`fade-up delay-${(i % 3) + 1}`}>
+              <div className="service-card hover-lift">
                 <div className="service-icon">{s.icon}</div>
                 <h4>{s.title}</h4>
                 <p style={{ marginBottom: '0.75rem' }}>{s.desc}</p>

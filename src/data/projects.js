@@ -13,7 +13,7 @@ const projects = [
   {
     title: "Iota Omega Chapter",
     desc: "Fraternity chapter site with Firebase admin portal, live event calendar, member database, and photo archives.",
-    tags: ["React 18", "Firebase", "Netlify", "Bootstrap"],
+    tags: ["React 18", "Firebase", "Bootstrap"],
     url: "https://iotaomega1923.com",
     status: "live",
   },

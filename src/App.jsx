@@ -8,8 +8,10 @@ import Portfolio from './components/Portfolio'
 import About from './components/About'
 import Contact from './components/Contact'
 import Capabilities from './pages/Capabilities'
+import { useFadeInAll } from './hooks/useFadeIn'
 
 function Home() {
+  useFadeInAll()
   return (
     <main style={{ flex: 1, paddingTop: '64px' }}>
       <Hero />

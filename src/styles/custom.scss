@@ -119,9 +119,27 @@ body {
     font-weight: 500;
     font-size: 0.9rem;
     padding: 0.4rem 0.85rem !important;
-    transition: color 0.2s;
+    transition: color 0.2s, transform 0.2s;
+    position: relative;
 
-    &:hover, &.active { color: #fff !important; }
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0.85rem;
+      right: 0.85rem;
+      height: 2px;
+      background: $nt-blue-light;
+      transform: scaleX(0);
+      transition: transform 0.25s ease;
+      transform-origin: left;
+    }
+
+    &:hover, &.active {
+      color: #fff !important;
+      transform: translateY(-1px);
+      &::after { transform: scaleX(1); }
+    }
   }
 
   .navbar-toggler {
@@ -770,5 +788,45 @@ body {
     gap: 0.5rem;
 
     p { font-size: 0.78rem; color: $nt-muted; margin: 0; }
+  }
+}
+
+// ── Scroll animations ─────────────────────────────────────────────────────────
+.fade-up {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &.delay-1 { transition-delay: 0.1s; }
+  &.delay-2 { transition-delay: 0.2s; }
+  &.delay-3 { transition-delay: 0.3s; }
+  &.delay-4 { transition-delay: 0.4s; }
+}
+
+.hover-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+  &:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25) !important;
+  }
+}
+
+// ── Mobile navbar brand ───────────────────────────────────────────────────────
+@media (max-width: 991px) {
+  .nt-navbar .navbar-brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+
+    .brand-sub {
+      display: block;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+    }
   }
 }

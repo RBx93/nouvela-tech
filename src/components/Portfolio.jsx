@@ -5,7 +5,7 @@ function Portfolio() {
   return (
     <section id="portfolio" className="nt-portfolio">
       <Container>
-        <Row className="mb-5">
+        <Row className="mb-5 fade-up">
           <Col lg={8}>
             <div className="section-eyebrow">
               Our Work
@@ -21,8 +21,8 @@ function Portfolio() {
 
         <Row className="g-4">
           {projects.map((p, i) => (
-            <Col md={6} lg={4} key={i}>
-              <div className="portfolio-card h-100">
+            <Col md={6} lg={4} key={i} className={`fade-up delay-${(i % 3) + 1}`}>
+              <div className="portfolio-card h-100 hover-lift">
                 <div className="preview-wrap">
                   {p.url ? (
                     <>
