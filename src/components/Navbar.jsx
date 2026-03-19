@@ -19,11 +19,12 @@ function NouvelaNavbar() {
         <Navbar.Brand as={Link} to="/" className="d-flex align-items-center gap-3" onClick={close}>
           <img src={logoIcon} alt="Nouvela Technology Group icon" className="navbar-logo-icon" />
           <span className="navbar-brand-text">
-            NOUVELA <span className="brand-sub">TECHNOLOGY GROUP</span>
+            <span className="brand-main">NOUVELA</span>
+            <span className="brand-sub">TECHNOLOGY GROUP</span>
           </span>
         </Navbar.Brand>
 
-        <Navbar.Toggle aria-controls="nt-nav" />
+        <Navbar.Toggle aria-controls="nt-nav" className="ms-auto" />
         <Navbar.Collapse id="nt-nav">
           <Nav className="ms-auto">
             <Nav.Link href="/#govcon" onClick={close}>Gov Contracting</Nav.Link>

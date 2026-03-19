@@ -817,16 +817,23 @@ body {
 }
 
 // ── Mobile navbar brand ───────────────────────────────────────────────────────
-@media (max-width: 991px) {
-  .nt-navbar .navbar-brand-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.15;
+.nt-navbar .navbar-brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
 
-    .brand-sub {
-      display: block;
-      font-size: 0.72rem;
-      letter-spacing: 0.08em;
-    }
+  .brand-main {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    color: #fff;
+  }
+
+  .brand-sub {
+    display: block;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    color: $nt-blue-light;
   }
 }
