@@ -10,7 +10,7 @@ function Footer() {
       <img src={logo} alt="" aria-hidden="true" className="footer-bg-logo" />
       <Container style={{ position: 'relative', zIndex: 1 }}>
         <Row className="g-4">
-          <Col lg={4} className="brand-col text-center text-lg-start">
+          <Col xs={12} lg={4} className="brand-col text-center text-lg-start">
             <div className="footer-brand-block">
               <img src={logoIcon} alt="" aria-hidden="true" className="footer-shield-overlay" />
               <p>
@@ -20,7 +20,7 @@ function Footer() {
             </div>
           </Col>
 
-          <Col sm={4} lg={2}>
+          <Col xs={6} sm={4} lg={2} className="text-center text-lg-start">
             <h6>Navigate</h6>
             <ul>
               <li><a href="#hero">Home</a></li>
@@ -32,7 +32,7 @@ function Footer() {
             </ul>
           </Col>
 
-          <Col sm={4} lg={3}>
+          <Col xs={6} sm={4} lg={3} className="text-center text-lg-start">
             <h6>Client Sites</h6>
             <ul>
               <li><a href="https://black-grass-0bd5c040f.6.azurestaticapps.net" target="_blank" rel="noopener noreferrer">Bassy Handyman Co.</a></li>
@@ -41,11 +41,10 @@ function Footer() {
             </ul>
           </Col>
 
-          <Col sm={4} lg={3}>
+          <Col xs={12} sm={4} lg={3} className="text-center text-lg-start">
             <h6>Contact</h6>
             <ul>
               <li><a href="mailto:info@novelatechnologygroup.com">info@novelatechnologygroup.com</a></li>
-
               <li><span style={{ color: '#94a3b8', fontSize: '0.85rem' }}>Winter Garden, FL 34787</span></li>
             </ul>
           </Col>
