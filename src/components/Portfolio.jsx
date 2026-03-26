@@ -26,12 +26,16 @@ function Portfolio() {
                 <div className="preview-wrap">
                   {p.url ? (
                     <>
-                      <iframe
-                        src={p.url}
-                        title={p.title}
+                      <img
+                        src={`https://api.microlink.io/?url=${encodeURIComponent(p.url)}&screenshot=true&meta=false&embed=screenshot.url`}
+                        alt={`${p.title} preview`}
                         loading="lazy"
-                        sandbox="allow-scripts allow-same-origin"
+                        style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top', display: 'block' }}
+                        onError={e => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'flex'; }}
                       />
+                      <div style={{ display: 'none', height: '100%', alignItems: 'center', justifyContent: 'center', background: '#0d1a2e', color: '#94a3b8', fontSize: '0.85rem' }}>
+                        Preview unavailable
+                      </div>
                       <div className="preview-overlay">
                         <a href={p.url} target="_blank" rel="noopener noreferrer">
                           View Live Site ↗

@@ -24,6 +24,13 @@ const projects = [
     url: null,
     status: "in_development",
   },
+  {
+    title: "Knell Care Inc.",
+    desc: "Healthcare services site for an IDD provider with intake form, careers, services breakdown, and 24/7 contact.",
+    tags: ["React 19", "Bootstrap 5", "SCSS", "Azure"],
+    url: "https://ambitious-forest-0aa78ba0f.4.azurestaticapps.net",
+    status: "in_development",
+  },
 ]
 
 export default projects
