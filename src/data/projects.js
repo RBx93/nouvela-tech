@@ -31,6 +31,13 @@ const projects = [
     url: "https://ambitious-forest-0aa78ba0f.4.azurestaticapps.net",
     status: "in_development",
   },
+  {
+    title: "Beehive Lodge #779",
+    desc: "WordPress site for a Prince Hall Masonic lodge featuring news & events, officer directory, membership info, and community outreach.",
+    tags: ["WordPress", "WPBakery", "AIOSEO"],
+    url: "https://beehive779apk.com",
+    status: "live",
+  },
 ]
 
 export default projects
