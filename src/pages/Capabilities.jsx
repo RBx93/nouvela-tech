@@ -29,6 +29,8 @@ const competencies = [
     points: [
       'Custom web portals and dashboards',
       'React-based single-page applications',
+      'Multi-tenant SaaS platforms with row-level security',
+      'Regulated-industry systems (ISO/IEC 17025 LIMS, audit logging)',
       'Firebase Auth and role-based access control',
       'Azure cloud hosting and CI/CD deployment',
     ],
