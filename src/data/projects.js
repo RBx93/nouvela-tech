@@ -4,6 +4,13 @@
 
 const projects = [
   {
+    title: "CSCI LIMS (cscilab.com)",
+    desc: "Multi-tenant, ISO/IEC 17025-compliant Laboratory Information Management System for the Center for Sustainable Chemical Innovations. 10 modules: sample management, work orders, calibration, document control, QC charts, CoA reporting, and a client portal — with row-level security and append-only audit logging.",
+    tags: ["React 19", "Azure Functions", "Azure SQL (RLS)", "Azure AD B2C", "ISO 17025"],
+    url: null,
+    status: "in_development",
+  },
+  {
     title: "Bassy Handyman Co.",
     desc: "Full-service handyman website with contact form, gallery, before/after slider, and Google Analytics.",
     tags: ["React 19", "Bootstrap 5", "EmailJS", "Azure"],
@@ -19,10 +26,10 @@ const projects = [
   },
   {
     title: "Bryant's Lawn Care Services LLC",
-    desc: "Lawn care service site with quote request form, service showcase, before/after comparisons, and FAQ.",
-    tags: ["React 19", "Bootstrap 5", "SCSS", "Azure"],
-    url: null,
-    status: "in_development",
+    desc: "Editorial redesign for an Eastern NC lawn care business. Custom Patagonia-style visual identity, accordion service catalog, before/after sliders, verified HomeAdvisor testimonials, SEO foundation, and Google Maps service area. Deployed on Azure with GitHub Actions CI/CD.",
+    tags: ["React 19", "Bootstrap 5", "SCSS", "Azure SWA", "SEO"],
+    url: "https://bryantslawncare.org",
+    status: "live",
   },
   {
     title: "Knell Care Inc.",
