@@ -32,11 +32,11 @@ const projects = [
     status: "live",
   },
   {
-    title: "Knell Care Inc.",
-    desc: "Healthcare services site for an IDD provider with intake form, careers, services breakdown, and 24/7 contact.",
-    tags: ["React 19", "Bootstrap 5", "SCSS", "Azure"],
-    url: "https://ambitious-forest-0aa78ba0f.4.azurestaticapps.net",
-    status: "in_development",
+    title: "LABTEQ",
+    desc: "E-commerce storefront for a science-inspired apparel and merch brand — product catalog with detail modals, cart, and custom loading experience.",
+    tags: ["JavaScript", "E-commerce", "Azure SWA"],
+    url: "https://thelabteq.com",
+    status: "live",
   },
   {
     title: "Beehive Lodge #779",
