@@ -9,7 +9,7 @@ const projects = [
     title: "CSCI LIMS (cscilab.com)",
     desc: "Multi-tenant, ISO/IEC 17025-compliant Laboratory Information Management System for the Center for Sustainable Chemical Innovations. 10 modules: sample management, work orders, calibration, document control, QC charts, CoA reporting, and a client portal — with row-level security and append-only audit logging.",
     tags: ["React 19", "Azure Functions", "Azure SQL (RLS)", "Azure AD B2C", "ISO 17025"],
-    url: "https://thankful-smoke-07fd79910.7.azurestaticapps.net",
+    url: "https://black-island-057c07610.7.azurestaticapps.net",
     preview: "/previews/csci-lims.webp",
     status: "in_development",
   },
