@@ -27,7 +27,7 @@ function Portfolio() {
                   {p.url ? (
                     <>
                       <img
-                        src={`https://api.microlink.io/?url=${encodeURIComponent(p.url)}&screenshot=true&meta=false&embed=screenshot.url`}
+                        src={p.preview || `https://api.microlink.io/?url=${encodeURIComponent(p.url)}&screenshot=true&meta=false&embed=screenshot.url`}
                         alt={`${p.title} preview`}
                         loading="lazy"
                         style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top', display: 'block' }}
