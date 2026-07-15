@@ -14,6 +14,13 @@ const projects = [
     status: "in_development",
   },
   {
+    title: "CSCI Verify",
+    desc: "Scientific data-review marketplace built on the CSCI LIMS: every dataset gets three blind, independent expert reviews reconciled by AI into one consolidated report, e-signed by a senior scientist and delivered through a paid client portal — with credential verification and consultant payout tracking end to end.",
+    tags: ["React 19", "Azure Functions", "Azure SQL", "Claude API", "Marketplace"],
+    url: "https://blue-wave-090fdef10.7.azurestaticapps.net",
+    status: "live",
+  },
+  {
     title: "Bassy Handyman Co.",
     desc: "Full-service handyman website with contact form, gallery, before/after slider, and Google Analytics.",
     tags: ["React 19", "Bootstrap 5", "EmailJS", "Azure"],
