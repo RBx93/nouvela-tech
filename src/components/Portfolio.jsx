@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Container, Row, Col, Button } from 'react-bootstrap'
 import projects from '../data/projects'
 
@@ -13,6 +13,14 @@ const statusLabels = {
 function Portfolio() {
   const [showAll, setShowAll] = useState(false)
   const visibleProjects = showAll ? projects : projects.slice(0, VISIBLE_COUNT)
+
+  // Cards revealed by "Show more" mount after useFadeInAll() has already
+  // attached its observers, so they'd stay at opacity 0. Fade them in here.
+  useEffect(() => {
+    if (!showAll) return
+    document.querySelectorAll('.nt-portfolio .fade-up:not(.visible)')
+      .forEach(el => el.classList.add('visible'))
+  }, [showAll])
 
   return (
     <section id="portfolio" className="nt-portfolio">
