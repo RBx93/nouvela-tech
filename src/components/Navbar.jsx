@@ -7,6 +7,11 @@ function NouvelaNavbar() {
   const [expanded, setExpanded] = useState(false)
   const close = () => setExpanded(false)
 
+  const goHome = () => {
+    close()
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+  }
+
   return (
     <Navbar
       fixed="top"
@@ -16,7 +21,7 @@ function NouvelaNavbar() {
       className="nt-navbar"
     >
       <Container>
-        <Navbar.Brand as={Link} to="/" className="d-flex align-items-center gap-3" onClick={close}>
+        <Navbar.Brand as={Link} to="/" className="d-flex align-items-center gap-3" onClick={goHome}>
           <img src={logoIcon} alt="Nouvela Technology Group icon" className="navbar-logo-icon" />
           <span className="navbar-brand-text">
             <span className="brand-main">NOUVELA</span>

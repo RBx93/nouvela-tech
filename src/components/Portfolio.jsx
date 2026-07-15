@@ -1,7 +1,19 @@
-import { Container, Row, Col } from 'react-bootstrap'
+import { useState } from 'react'
+import { Container, Row, Col, Button } from 'react-bootstrap'
 import projects from '../data/projects'
 
+const VISIBLE_COUNT = 6
+
+const statusLabels = {
+  live: 'Live',
+  in_development: 'In Development',
+  planning: 'Planning',
+}
+
 function Portfolio() {
+  const [showAll, setShowAll] = useState(false)
+  const visibleProjects = showAll ? projects : projects.slice(0, VISIBLE_COUNT)
+
   return (
     <section id="portfolio" className="nt-portfolio">
       <Container>
@@ -20,7 +32,7 @@ function Portfolio() {
         </Row>
 
         <Row className="g-4">
-          {projects.map((p, i) => (
+          {visibleProjects.map((p, i) => (
             <Col md={6} lg={4} key={i} className={`fade-up delay-${(i % 3) + 1}`}>
               <div className="portfolio-card h-100 hover-lift">
                 <div className="preview-wrap">
@@ -68,7 +80,7 @@ function Portfolio() {
                   <p>{p.desc}</p>
                   <div className="card-footer-nt">
                     <span className={`status-dot${p.status !== 'live' ? ' planning' : ''}`}>
-                      {p.status === 'live' ? 'Live' : p.status}
+                      {statusLabels[p.status] || p.status}
                     </span>
                     {p.url && (
                       <a href={p.url} target="_blank" rel="noopener noreferrer">
@@ -81,6 +93,20 @@ function Portfolio() {
             </Col>
           ))}
         </Row>
+
+        {projects.length > VISIBLE_COUNT && (
+          <Row className="mt-4">
+            <Col className="text-center">
+              <Button
+                variant="outline-light"
+                onClick={() => setShowAll(s => !s)}
+                style={{ borderRadius: '2rem', padding: '0.5rem 1.75rem', fontWeight: 600 }}
+              >
+                {showAll ? 'Show less' : `Show more (${projects.length - VISIBLE_COUNT})`}
+              </Button>
+            </Col>
+          </Row>
+        )}
       </Container>
     </section>
   )

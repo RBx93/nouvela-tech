@@ -6,19 +6,12 @@
 
 const projects = [
   {
-    title: "CSCI LIMS (cscilab.com)",
-    desc: "Multi-tenant, ISO/IEC 17025-compliant Laboratory Information Management System for the Center for Sustainable Chemical Innovations. 10 modules: sample management, work orders, calibration, document control, QC charts, CoA reporting, and a client portal — with row-level security and append-only audit logging.",
-    tags: ["React 19", "Azure Functions", "Azure SQL (RLS)", "Azure AD B2C", "ISO 17025"],
-    url: "https://black-island-057c07610.7.azurestaticapps.net",
-    preview: "/previews/csci-lims.webp",
-    status: "in_development",
-  },
-  {
     title: "CSCI Verify",
     desc: "Scientific data-review marketplace built on the CSCI LIMS: every dataset gets three blind, independent expert reviews reconciled by AI into one consolidated report, e-signed by a senior scientist and delivered through a paid client portal — with credential verification and consultant payout tracking end to end.",
     tags: ["React 19", "Azure Functions", "Azure SQL", "Claude API", "Marketplace"],
     url: "https://blue-wave-090fdef10.7.azurestaticapps.net",
-    status: "live",
+    preview: "/previews/csci-verify.webp",
+    status: "in_development",
   },
   {
     title: "Bassy Handyman Co.",
@@ -59,6 +52,14 @@ const projects = [
     url: "https://beehive779apk.com",
     preview: "/previews/beehive-779.webp",
     status: "live",
+  },
+  {
+    title: "CSCI LIMS (cscilab.com)",
+    desc: "Multi-tenant, ISO/IEC 17025-compliant Laboratory Information Management System for the Center for Sustainable Chemical Innovations. 10 modules: sample management, work orders, calibration, document control, QC charts, CoA reporting, and a client portal — with row-level security and append-only audit logging.",
+    tags: ["React 19", "Azure Functions", "Azure SQL (RLS)", "Azure AD B2C", "ISO 17025"],
+    url: "https://black-island-057c07610.7.azurestaticapps.net",
+    preview: "/previews/csci-lims.webp",
+    status: "in_development",
   },
 ]
 
