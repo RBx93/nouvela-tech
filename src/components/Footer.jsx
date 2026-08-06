@@ -7,12 +7,12 @@ function Footer() {
 
   return (
     <footer className="nt-footer">
-      <img src={logo} alt="" aria-hidden="true" className="footer-bg-logo" />
+      <img src={logo} alt="" aria-hidden="true" className="footer-bg-logo" loading="lazy" decoding="async" />
       <Container style={{ position: 'relative', zIndex: 1 }}>
         <Row className="g-4">
           <Col xs={12} lg={4} className="brand-col text-center text-lg-start">
             <div className="footer-brand-block">
-              <img src={logoIcon} alt="" aria-hidden="true" className="footer-shield-overlay" />
+              <img src={logoIcon} alt="" aria-hidden="true" className="footer-shield-overlay" loading="lazy" decoding="async" />
               <p>
                 SBA-registered small business delivering software engineering, GIS services,
                 program support, and technical services to government and commercial clients.

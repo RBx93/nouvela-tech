@@ -23,6 +23,32 @@ $border-radius-lg: 0.75rem;
 
 @import 'bootstrap/scss/bootstrap';
 
+// ── Mobile layout guards ──────────────────────────────────────────────────────
+// `.container` pads 12px each side, but `g-5` sets a 48px gutter, so its row
+// pulls -24px and escapes the viewport by 12px — enough to scroll the entire
+// page sideways on a phone (measured 402px against a 390px viewport). Columns
+// are stacked at these widths, so the wide horizontal gutter buys nothing.
+@include media-breakpoint-down(lg) {
+  .row.g-5,
+  .row.gx-5 { --bs-gutter-x: 1.5rem; }
+}
+
+// Phones: hold the 44px minimum tap target. The navbar toggle was 40px and the
+// portfolio "View Live Site" links 36px.
+@include media-breakpoint-down(md) {
+  .btn,
+  .navbar-toggler,
+  .btn-nt-primary,
+  .btn-nt-outline,
+  .preview-overlay a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
 // ── Global ────────────────────────────────────────────────────────────────────
 * { box-sizing: border-box; }
 
@@ -857,5 +883,20 @@ body {
     font-size: 0.65rem;
     letter-spacing: 0.1em;
     color: $nt-blue-light;
+  }
+}
+
+// ── Touch devices: reveal the portfolio CTA ───────────────────────────────────
+// `.preview-overlay` is opacity:0 until the card is hovered, and touch devices
+// never hover — so "View Live Site" was invisible and unreachable on a phone,
+// killing click-through to every live client site from Nouvela's own shopfront.
+// Placed last, with the full selector chain, so it outranks the 4-class rule
+// in the portfolio component above.
+@media (hover: none) {
+  .nt-portfolio .portfolio-card .preview-wrap .preview-overlay {
+    opacity: 1;
+    background: linear-gradient(to top, rgba(6, 15, 30, 0.88) 0%, rgba(6, 15, 30, 0) 60%);
+    align-items: flex-end;
+    padding-bottom: 0.85rem;
   }
 }
