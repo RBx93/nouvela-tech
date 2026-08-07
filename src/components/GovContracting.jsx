@@ -32,8 +32,8 @@ function GovContracting() {
         {/* Header */}
         <Row className="mb-5">
           <Col lg={8}>
-            <div className="section-eyebrow">Government Contracting</div>
-            <h2 style={{ fontWeight: 800, fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: '#fff' }}>
+            <div className="section-eyebrow" data-aos="fade-up">Government Contracting</div>
+            <h2 data-aos="fade-up" data-aos-delay="100" style={{ fontWeight: 800, fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: '#fff' }}>
               A Registered Federal Contractor
             </h2>
             <p style={{ color: '#94a3b8', marginTop: '0.75rem', fontSize: '0.95rem', lineHeight: 1.75 }}>

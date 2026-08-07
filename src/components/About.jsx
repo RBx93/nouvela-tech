@@ -39,8 +39,8 @@ function About() {
       <Container>
         <Row className="align-items-start g-5 mb-5">
           <Col lg={5}>
-            <div className="section-eyebrow">Who We Are</div>
-            <h2 style={{ fontWeight: 800, fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: '#fff', marginBottom: '1.25rem' }}>
+            <div className="section-eyebrow" data-aos="fade-up">Who We Are</div>
+            <h2 data-aos="fade-up" data-aos-delay="100" style={{ fontWeight: 800, fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: '#fff', marginBottom: '1.25rem' }}>
               Technology. Service. Impact.
             </h2>
             <p style={{ color: '#94a3b8', lineHeight: 1.75, fontSize: '0.95rem', marginBottom: '1rem' }}>

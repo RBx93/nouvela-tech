@@ -52,8 +52,8 @@ function Contact() {
       <Container>
         <Row className="g-5 align-items-start">
           <Col lg={5}>
-            <div className="section-eyebrow" style={{ color: '#60a5fa', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>Contact</div>
-            <h2 style={{ fontWeight: 800, fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: '#fff', marginBottom: '1rem' }}>
+            <div className="section-eyebrow" data-aos="fade-up" style={{ color: '#60a5fa', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>Contact</div>
+            <h2 data-aos="fade-up" data-aos-delay="100" style={{ fontWeight: 800, fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: '#fff', marginBottom: '1rem' }}>
               Let's Build Solutions That Work
             </h2>
             <p style={{ color: '#94a3b8', lineHeight: 1.7, fontSize: '0.92rem', marginBottom: '2.5rem' }}>

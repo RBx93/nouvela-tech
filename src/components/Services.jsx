@@ -45,8 +45,8 @@ function Services() {
       <Container>
         <Row className="mb-5 fade-up">
           <Col lg={7}>
-            <div className="section-eyebrow">What We Do</div>
-            <h2 style={{ fontWeight: 800, fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: '#fff' }}>
+            <div className="section-eyebrow" data-aos="fade-up">What We Do</div>
+            <h2 data-aos="fade-up" data-aos-delay="100" style={{ fontWeight: 800, fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: '#fff' }}>
               Services Built for Mission Success
             </h2>
             <p style={{ color: '#94a3b8', marginTop: '0.75rem', fontSize: '0.95rem' }}>

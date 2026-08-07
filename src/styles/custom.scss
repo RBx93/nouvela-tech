@@ -900,3 +900,28 @@ body {
     padding-bottom: 0.85rem;
   }
 }
+
+// ─── Scroll-motion guards ─────────────────────────────────────────────────────
+// AOS's own stylesheet sets `[data-aos] { opacity: 0 }` and relies on its JS to
+// add .aos-animate. So the `disable: prefers-reduced-motion` in AOS.init is only
+// half the job — with the JS opted out, that CSS keeps every animated element
+// invisible and the page renders blank for exactly the people it was meant to
+// accommodate. This puts the content back.
+@media (prefers-reduced-motion: reduce) {
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+// Arriving via an in-page link should not mean waiting out a 600ms fade — the
+// visitor asked to be taken there. main.jsx tags the destination with this on
+// anchor click / hashchange so it is simply visible on arrival. Scroll-in
+// reveals elsewhere on the page are untouched.
+[data-aos].aos-jump-reveal {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
