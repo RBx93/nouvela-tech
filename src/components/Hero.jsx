@@ -13,21 +13,20 @@ function Hero() {
       <Container>
         <Row className="align-items-center g-5">
           <Col lg={6}>
-            <div className="hero-badge load-in" style={{ '--i': 0 }}>Technology. Operations. Impact.</div>
-            <h1 className="load-in" style={{ '--i': 1 }}>
-              Practical Solutions. <span className="gradient-text draw-rule" style={{ '--i': 1 }}>Real-World Results.</span>
+            <h1 className="load-in" style={{ '--i': 0 }}>
+              Practical Solutions. <span className="gradient-text draw-rule" style={{ '--i': 0 }}>Real-World Results.</span>
             </h1>
-            <p className="hero-sub load-in" style={{ '--i': 2 }}>
+            <p className="hero-sub load-in" style={{ '--i': 1 }}>
               Nouvela Technology Group LLC delivers high-value solutions across software engineering,
               administrative support, geospatial services, and program management — helping organizations
               improve operations and support mission success.
             </p>
-            <div className="d-flex gap-3 flex-wrap load-in" style={{ '--i': 3 }}>
+            <div className="d-flex gap-3 flex-wrap load-in" style={{ '--i': 2 }}>
               <a href="#govcon" className="btn-nt-primary text-decoration-none">Government Contracting</a>
               <a href="#contact" className="btn-nt-outline text-decoration-none">Get in Touch</a>
             </div>
 
-            <div className="hero-stats load-in" style={{ '--i': 4 }}>
+            <div className="hero-stats load-in" style={{ '--i': 3 }}>
               <div className="stat">
                 <div className="stat-value">SAM</div>
                 <div className="stat-label">Active Registrant</div>
