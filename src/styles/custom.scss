@@ -12,6 +12,13 @@ $nt-gold:        #f59e0b;
 $nt-text:        #e2e8f0;
 $nt-muted:       #94a3b8;
 
+// Hero network accent. Tracks the site's blue — the terrain render is
+// hue-shifted to match it, so these are deliberately $nt-blue and not a
+// separate colour. Kept as their own tokens so the overlay can be re-tinted in
+// one place if the background art is ever regenerated.
+$nv-accent:      #2563eb;
+$nv-accent-lite: #60a5fa;
+
 // Bootstrap variable overrides (must come before import)
 $primary:         $nt-blue;
 $secondary:       $nt-red;
@@ -194,11 +201,8 @@ body {
 }
 
 // ── Hero ─────────────────────────────────────────────────────────────────────
-// The hero accent. Set to match the terrain render, which is violet; the rest
-// of the site runs on $nt-blue. Change this one value to re-tint the whole
-// network overlay if the background image is ever recoloured.
-$nv-accent:      #aa3bff;
-$nv-accent-lite: #c084fc;
+// $nv-accent / $nv-accent-lite are declared with the other colour tokens at the
+// top of this file — the buttons need them before this point.
 
 .nt-hero {
   min-height: 100vh;
@@ -207,7 +211,7 @@ $nv-accent-lite: #c084fc;
   position: relative;
   isolation: isolate; // keeps the layers below out of the page's stacking order
   overflow: hidden;
-  background: #16171d;
+  background: $nt-dark;
   padding: 6rem 0 4rem;
 
   // ── Layer 1: terrain ────────────────────────────────────────────────────
@@ -215,7 +219,7 @@ $nv-accent-lite: #c084fc;
     position: absolute;
     inset: 0;
     z-index: 0;
-    background: #16171d url('/nv-hero.jpg') center right / cover no-repeat;
+    background: $nt-dark url('/nv-hero.jpg') center right / cover no-repeat;
   }
 
   // ── Layer 2: readability gradient ───────────────────────────────────────
@@ -227,10 +231,10 @@ $nv-accent-lite: #c084fc;
     z-index: 1;
     background: linear-gradient(
       90deg,
-      rgba(22, 23, 29, 0.98) 0%,
-      rgba(22, 23, 29, 0.92) 28%,
-      rgba(22, 23, 29, 0.55) 52%,
-      rgba(22, 23, 29, 0.08) 100%
+      rgba(6, 16, 30, 0.98) 0%,
+      rgba(6, 16, 30, 0.92) 28%,
+      rgba(6, 16, 30, 0.55) 52%,
+      rgba(6, 16, 30, 0.08) 100%
     );
   }
 
@@ -440,10 +444,10 @@ $nv-accent-lite: #c084fc;
     .nv-scrim {
       background: linear-gradient(
         180deg,
-        rgba(22, 23, 29, 0.97) 0%,
-        rgba(22, 23, 29, 0.95) 40%,
-        rgba(22, 23, 29, 0.86) 62%,
-        rgba(22, 23, 29, 0.45) 100%
+        rgba(6, 16, 30, 0.97) 0%,
+        rgba(6, 16, 30, 0.95) 40%,
+        rgba(6, 16, 30, 0.86) 62%,
+        rgba(6, 16, 30, 0.45) 100%
       );
     }
   }
@@ -1075,4 +1079,44 @@ $nv-accent-lite: #c084fc;
   opacity: 1 !important;
   transform: none !important;
   transition: none !important;
+}
+
+// ─── Hero load-in ─────────────────────────────────────────────────────────────
+// Above-the-fold text rises into place on first paint, one line after the next,
+// with a rule that draws itself left-to-right underneath. Pure CSS — driving it
+// from JS lets the text paint first and then jump on a slow connection, which is
+// worse than no animation. Stagger reads from --i so any number of lines share
+// one class. This is the load-time counterpart to the AOS scroll reveals further
+// down; a hero is already on screen, so a scroll trigger never fires cleanly.
+@keyframes load-fade-up { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
+@keyframes load-draw-x  { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+.load-in {
+  animation: load-fade-up .7s cubic-bezier(.25, 0, .35, 1) both;
+  animation-delay: calc(.05s + var(--i, 0) * .14s);
+}
+
+// inline-block so the rule is as wide as the words, not the whole column.
+.draw-rule { position: relative; display: inline-block; }
+.draw-rule::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -8px;
+  height: 2px; width: 100%;
+  background: #60a5fa; // blue-light — the red accent goes muddy on the dark hero ground
+  transform-origin: left center;
+  animation: load-draw-x .5s ease-out both;
+  animation-delay: calc(.05s + var(--i, 0) * .14s + .35s);
+}
+
+// The @media (hover: none) tap-target rules set display: inline-flex on buttons
+// and links; restated here so that can never strip the rule's inline-block and
+// stretch it to the full column. Two-class selector rather than !important.
+.nt-hero .draw-rule { display: inline-block; }
+
+@media (prefers-reduced-motion: reduce) {
+  .load-in,
+  .draw-rule::after { animation: none !important; }
+  .load-in { opacity: 1 !important; transform: none !important; }
+  .draw-rule::after { transform: scaleX(1) !important; }
 }
