@@ -1,8 +1,15 @@
 import { Container, Row, Col } from 'react-bootstrap'
+import GeospatialNetwork from './GeospatialNetwork'
 
 function Hero() {
   return (
     <section id="hero" className="nt-hero">
+      {/* Terrain, readability scrim, then the live survey network. All three
+          are decorative and sit behind the copy — see .nt-hero in custom.scss
+          for the z-index stack. */}
+      <div className="nv-bg" aria-hidden="true" />
+      <div className="nv-scrim" aria-hidden="true" />
+      <GeospatialNetwork />
       <Container>
         <Row className="align-items-center g-5">
           <Col lg={6}>
@@ -36,30 +43,10 @@ function Hero() {
             </div>
           </Col>
 
-          <Col lg={6}>
-            <div className="hero-visual">
-              <div className="code-block">
-                <div><span className="cmt">// Nouvela Technology Group LLC</span></div>
-                <div><span className="kw">const</span> <span className="fn">mission</span> = &#123;</div>
-                <div>&nbsp;&nbsp;focus: <span className="str">'technology + operations'</span>,</div>
-                <div>&nbsp;&nbsp;delivery: <span className="str">'practical + scalable'</span>,</div>
-                <div>&nbsp;&nbsp;clients: <span className="str">'gov + commercial'</span>,</div>
-                <div>&nbsp;&nbsp;ai_ready: <span className="kw">true</span>,</div>
-                <div>&nbsp;&nbsp;registered: <span className="str">'SAM.gov active'</span>,</div>
-                <div>&#125;</div>
-                <div style={{ marginTop: '0.75rem' }}>
-                  <span className="fn">mission</span>.execute()
-                  &nbsp;<span className="cmt">// ✓ impact delivered</span>
-                </div>
-              </div>
-              <div className="visual-footer">
-                <div className="dot red" />
-                <div className="dot yellow" />
-                <div className="dot green" />
-                <span>nouvela.tech — active</span>
-              </div>
-            </div>
-          </Col>
+          {/* The right column is deliberately empty. It used to hold a mock
+              code window, which read as a developer portfolio and undercut the
+              federal-contracting positioning. The terrain and its survey
+              network now occupy that half. */}
         </Row>
       </Container>
     </section>
