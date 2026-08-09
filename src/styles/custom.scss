@@ -1125,3 +1125,24 @@ body {
   .load-in { opacity: 1 !important; transform: none !important; }
   .draw-rule::after { transform: scaleX(1) !important; }
 }
+
+// ─── Service capability groups ───────────────────────────────────────────────
+.service-group-head {
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid $nt-dark-border;
+
+  .service-group-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $nt-blue-light;
+    margin: 0;
+  }
+  .service-group-blurb {
+    color: $nt-muted;
+    font-size: 0.88rem;
+    margin: 0.35rem 0 0;
+  }
+}

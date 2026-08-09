@@ -4,63 +4,81 @@ const services = [
   {
     icon: '💻',
     title: 'Software Engineering',
+    group: 'technology',
     desc: 'Custom applications, workflow automation, dashboards, and systems integration support designed to improve organizational performance.',
     bullets: ['Internal business applications', 'Workflow automation', 'Dashboard & reporting tools', 'Systems integration support'],
   },
   {
     icon: '🌐',
     title: 'Web Design & Development',
+    group: 'technology',
     desc: 'Fast, accessible, mobile-first websites for small businesses, nonprofits, and professional practices — designed, built, deployed, and maintained end to end.',
     bullets: ['Custom design & build', 'Mobile-first & accessible', 'Booking, contact & lead capture', 'Hosting, domains & ongoing maintenance'],
   },
   {
     icon: '⚡',
     title: 'Power Platform Solutions',
+    group: 'technology',
     desc: 'Business applications and automations built on Microsoft technologies to streamline operations and reduce manual effort.',
     bullets: ['Power Apps', 'Power Automate', 'Dataverse', 'Process automation & reporting'],
   },
   {
     icon: '☁️',
     title: 'Cloud Hosting & Deployment',
+    group: 'technology',
     desc: 'Production hosting on Azure and Firebase with automated build pipelines, custom domains, and managed SSL — so releases ship on a push instead of by hand.',
     bullets: ['Azure Static Web Apps & Firebase', 'GitHub Actions CI/CD', 'Domain setup & managed SSL', 'Environment & secrets management'],
   },
   {
     icon: '🛠️',
     title: 'Website Maintenance & Support',
+    group: 'support',
     desc: 'Ongoing care after launch — content updates, fixes, dependency and security patching, and uptime monitoring on a predictable monthly retainer.',
     bullets: ['Content & copy updates', 'Bug fixes, 1–2 day turnaround', 'Security & dependency updates', 'Uptime and backup monitoring'],
   },
   {
     icon: '📈',
     title: 'Analytics & Performance Optimization',
+    group: 'technology',
     desc: 'Measurement and remediation: analytics that show what converts, plus page-speed and accessibility work measured against real standards, not impressions.',
     bullets: ['GA4 & event tracking', 'Core Web Vitals & page speed', 'WCAG AA / Section 508 remediation', 'SEO & metadata foundations'],
   },
   {
     icon: '📋',
     title: 'Administrative & Program Support',
+    group: 'support',
     desc: 'Structured support services that help teams stay organized, compliant, and efficient across federal and commercial environments.',
     bullets: ['Scheduling & coordination', 'Documentation support', 'Data entry & records management', 'Program tracking'],
   },
   {
     icon: '🗺️',
     title: 'Geospatial Services (GIS)',
+    group: 'support',
     desc: 'Mapping, spatial analysis, geospatial data organization, and GIS portal maintenance for federal and environmental programs.',
     bullets: ['GIS mapping & analysis', 'Spatial data management', 'GIS portal development', 'Environmental data reporting'],
   },
   {
     icon: '🔧',
     title: 'Technical & Professional Services',
+    group: 'support',
     desc: 'Special project support combining organization, technology, analysis, and execution for government and commercial clients.',
     bullets: ['Program management support', 'Technical analysis', 'Facility support services', 'Emergency preparedness logistics'],
   },
   {
     icon: '🤖',
     title: 'Emerging AI Applications',
+    group: 'technology',
     desc: 'Practical artificial intelligence integration for field use — automating workflows, improving data visibility, and enabling smarter decisions.',
     bullets: ['AI-enabled workflow automation', 'Data-driven process improvement', 'Human-centered AI design', 'Community & health tech applications'],
   },
+]
+
+// Two capability groupings rather than a flat list of ten. Federal buyers scan
+// for capability areas, not an inventory — ten equal cards makes them read
+// everything or nothing.
+const GROUPS = [
+  { key: 'technology', label: 'Technology', blurb: 'Building, deploying, and measuring the systems themselves.' },
+  { key: 'support', label: 'Program Support', blurb: 'Keeping delivery organized, compliant, and running after launch.' },
 ]
 
 function Services() {
@@ -80,8 +98,14 @@ function Services() {
           </Col>
         </Row>
 
-        <Row className="g-4">
-          {services.map((s, i) => (
+        {GROUPS.map(({ key, label, blurb }) => (
+          <div key={key} className={key === 'support' ? 'mt-5' : ''}>
+            <div className="service-group-head">
+              <h3 className="service-group-title">{label}</h3>
+              <p className="service-group-blurb">{blurb}</p>
+            </div>
+            <Row className="g-4">
+              {services.filter(s => s.group === key).map((s, i) => (
             <Col md={6} lg={4} key={i} className={`fade-up delay-${(i % 3) + 1}`}>
               <div className="service-card hover-lift">
                 <div className="service-icon">{s.icon}</div>
@@ -93,9 +117,11 @@ function Services() {
                   ))}
                 </ul>
               </div>
-            </Col>
-          ))}
-        </Row>
+                </Col>
+              ))}
+            </Row>
+          </div>
+        ))}
       </Container>
     </section>
   )
