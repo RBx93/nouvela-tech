@@ -85,7 +85,7 @@ body {
 
 // ── Buttons ───────────────────────────────────────────────────────────────────
 .btn-nt-primary {
-  background: $nt-blue;
+  background: $nt-red;
   border: none;
   color: #fff;
   font-weight: 600;
@@ -94,7 +94,7 @@ body {
   transition: background 0.2s, transform 0.15s;
 
   &:hover {
-    background: darken($nt-blue, 8%);
+    background: darken($nt-red, 8%);
     color: #fff;
     transform: translateY(-1px);
   }
@@ -102,15 +102,15 @@ body {
 
 .btn-nt-outline {
   background: transparent;
-  border: 2px solid $nt-blue;
-  color: $nt-blue-light;
+  border: 2px solid $nt-red;
+  color: lighten($nt-red, 12%);
   font-weight: 600;
   padding: 0.6rem 1.6rem;
   border-radius: 0.5rem;
   transition: all 0.2s;
 
   &:hover {
-    background: $nt-blue;
+    background: $nt-red;
     color: #fff;
   }
 }

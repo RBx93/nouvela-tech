@@ -6,14 +6,6 @@
 
 const projects = [
   {
-    title: "CSCI Verify",
-    desc: "Scientific data-review marketplace built on the CSCI LIMS: every dataset gets three blind, independent expert reviews reconciled by AI into one consolidated report, e-signed by a senior scientist and delivered through a paid client portal — with credential verification and consultant payout tracking end to end.",
-    tags: ["React 19", "Azure Functions", "Azure SQL", "Claude API", "Marketplace"],
-    url: "https://blue-wave-090fdef10.7.azurestaticapps.net",
-    preview: "/previews/csci-verify.webp",
-    status: "in_development",
-  },
-  {
     title: "I Honore Realty",
     desc: "Statewide Florida brokerage site in four languages with browser auto-detect, per-agent profiles and direct contact routing, live MLS-ready listings with filtering and a Zillow-style detail modal, mortgage calculator, and home valuation.",
     tags: ["Firebase", "i18n", "MLS/IDX", "GitHub Actions"],
@@ -22,19 +14,11 @@ const projects = [
     status: "live",
   },
   {
-    title: "The 924 Project",
-    desc: "Nonprofit site for a community empowerment organization — programs, board and leadership profiles, event calendar, and a volunteer intake form writing to Firestore with validated, locked-down security rules.",
-    tags: ["React 19", "Firebase", "Firestore", "Bootstrap 5"],
-    url: "https://924project.org",
-    preview: "/previews/924-project.webp",
-    status: "live",
-  },
-  {
-    title: "HubbTech",
-    desc: "Part 107 licensed drone photography and video studio in Montgomery, Alabama. Portfolio-led site with service breakdown and booking enquiry flow.",
-    tags: ["React", "Firebase Hosting", "Responsive"],
-    url: "https://hubbtech.web.app",
-    preview: "/previews/hubbtech.webp",
+    title: "LABTEQ",
+    desc: "E-commerce storefront for a science-inspired apparel and merch brand — product catalog with detail modals, cart, and custom loading experience.",
+    tags: ["JavaScript", "E-commerce", "Azure SWA"],
+    url: "https://thelabteq.org",
+    preview: "/previews/labteq.webp",
     status: "live",
   },
   {
@@ -43,6 +27,14 @@ const projects = [
     tags: ["React 19", "Bootstrap 5", "EmailJS", "Azure"],
     url: "https://bassyhandyman.com",
     preview: "/previews/bassy-handyman.webp",
+    status: "live",
+  },
+  {
+    title: "The 924 Project",
+    desc: "Nonprofit site for a community empowerment organization — programs, board and leadership profiles, event calendar, and a volunteer intake form writing to Firestore with validated, locked-down security rules.",
+    tags: ["React 19", "Firebase", "Firestore", "Bootstrap 5"],
+    url: "https://924project.org",
+    preview: "/previews/924-project.webp",
     status: "live",
   },
   {
@@ -62,11 +54,11 @@ const projects = [
     status: "live",
   },
   {
-    title: "LABTEQ",
-    desc: "E-commerce storefront for a science-inspired apparel and merch brand — product catalog with detail modals, cart, and custom loading experience.",
-    tags: ["JavaScript", "E-commerce", "Azure SWA"],
-    url: "https://thelabteq.org",
-    preview: "/previews/labteq.webp",
+    title: "HubbTech",
+    desc: "Part 107 licensed drone photography and video studio in Montgomery, Alabama. Portfolio-led site with service breakdown and booking enquiry flow.",
+    tags: ["React", "Firebase Hosting", "Responsive"],
+    url: "https://hubbtech.web.app",
+    preview: "/previews/hubbtech.webp",
     status: "live",
   },
   {
@@ -76,6 +68,14 @@ const projects = [
     url: "https://beehive779apk.com",
     preview: "/previews/beehive-779.webp",
     status: "live",
+  },
+  {
+    title: "CSCI Verify",
+    desc: "Scientific data-review marketplace built on the CSCI LIMS: every dataset gets three blind, independent expert reviews reconciled by AI into one consolidated report, e-signed by a senior scientist and delivered through a paid client portal — with credential verification and consultant payout tracking end to end.",
+    tags: ["React 19", "Azure Functions", "Azure SQL", "Claude API", "Marketplace"],
+    url: "https://blue-wave-090fdef10.7.azurestaticapps.net",
+    preview: "/previews/csci-verify.webp",
+    status: "in_development",
   },
   {
     title: "CSCI LIMS (cscilab.com)",

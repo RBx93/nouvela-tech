@@ -8,6 +8,12 @@ const services = [
     bullets: ['Internal business applications', 'Workflow automation', 'Dashboard & reporting tools', 'Systems integration support'],
   },
   {
+    icon: '🌐',
+    title: 'Web Design & Development',
+    desc: 'Fast, accessible, mobile-first websites for small businesses, nonprofits, and professional practices — designed, built, deployed, and maintained end to end.',
+    bullets: ['Custom design & build', 'Mobile-first & accessible', 'Booking, contact & lead capture', 'Hosting, domains & ongoing maintenance'],
+  },
+  {
     icon: '⚡',
     title: 'Power Platform Solutions',
     desc: 'Business applications and automations built on Microsoft technologies to streamline operations and reduce manual effort.',
