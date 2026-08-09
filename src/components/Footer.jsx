@@ -35,9 +35,13 @@ function Footer() {
           <Col xs={6} sm={4} lg={3} className="text-center text-lg-start">
             <h6>Client Sites</h6>
             <ul>
-              <li><a href="https://black-grass-0bd5c040f.6.azurestaticapps.net" target="_blank" rel="noopener noreferrer">Bassy Handyman Co.</a></li>
+              <li><a href="https://ihonorerealty.com" target="_blank" rel="noopener noreferrer">I Honore Realty</a></li>
+              <li><a href="https://thelabteq.org" target="_blank" rel="noopener noreferrer">LabTeQ</a></li>
+              <li><a href="https://bassyhandyman.com" target="_blank" rel="noopener noreferrer">Bassy Handyman Co.</a></li>
+              <li><a href="https://924project.org" target="_blank" rel="noopener noreferrer">The 924 Project</a></li>
               <li><a href="https://iotaomega1923.com" target="_blank" rel="noopener noreferrer">Iota Omega Chapter</a></li>
-              <li><a href="#portfolio">Bryant's Lawn Care (soon)</a></li>
+              <li><a href="https://www.bryantslawncare.org" target="_blank" rel="noopener noreferrer">Bryant's Lawn Care</a></li>
+              <li><a href="https://hubbtech.web.app" target="_blank" rel="noopener noreferrer">HubbTech</a></li>
             </ul>
           </Col>
 

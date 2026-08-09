@@ -100,17 +100,22 @@ body {
   }
 }
 
+.nav-cta-blue {
+  background: $nt-blue !important;
+  &:hover { background: darken($nt-blue, 8%) !important; }
+}
+
 .btn-nt-outline {
   background: transparent;
-  border: 2px solid $nt-red;
-  color: lighten($nt-red, 12%);
+  border: 2px solid $nt-blue;
+  color: $nt-blue-light;
   font-weight: 600;
   padding: 0.6rem 1.6rem;
   border-radius: 0.5rem;
   transition: all 0.2s;
 
   &:hover {
-    background: $nt-red;
+    background: $nt-blue;
     color: #fff;
   }
 }

@@ -20,6 +20,24 @@ const services = [
     bullets: ['Power Apps', 'Power Automate', 'Dataverse', 'Process automation & reporting'],
   },
   {
+    icon: '☁️',
+    title: 'Cloud Hosting & Deployment',
+    desc: 'Production hosting on Azure and Firebase with automated build pipelines, custom domains, and managed SSL — so releases ship on a push instead of by hand.',
+    bullets: ['Azure Static Web Apps & Firebase', 'GitHub Actions CI/CD', 'Domain setup & managed SSL', 'Environment & secrets management'],
+  },
+  {
+    icon: '🛠️',
+    title: 'Website Maintenance & Support',
+    desc: 'Ongoing care after launch — content updates, fixes, dependency and security patching, and uptime monitoring on a predictable monthly retainer.',
+    bullets: ['Content & copy updates', 'Bug fixes, 1–2 day turnaround', 'Security & dependency updates', 'Uptime and backup monitoring'],
+  },
+  {
+    icon: '📈',
+    title: 'Analytics & Performance Optimization',
+    desc: 'Measurement and remediation: analytics that show what converts, plus page-speed and accessibility work measured against real standards, not impressions.',
+    bullets: ['GA4 & event tracking', 'Core Web Vitals & page speed', 'WCAG AA / Section 508 remediation', 'SEO & metadata foundations'],
+  },
+  {
     icon: '📋',
     title: 'Administrative & Program Support',
     desc: 'Structured support services that help teams stay organized, compliant, and efficient across federal and commercial environments.',

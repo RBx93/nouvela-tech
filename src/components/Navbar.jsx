@@ -39,7 +39,7 @@ function NouvelaNavbar() {
             <Nav.Link href="/#about" onClick={close}>About</Nav.Link>
             <Nav.Link href="/#contact" onClick={close}>Contact</Nav.Link>
           </Nav>
-          <a href="/#contact" className="btn-nt-primary ms-lg-3 mt-3 mt-lg-0 text-decoration-none" onClick={close}>
+          <a href="/#contact" className="btn-nt-primary nav-cta-blue ms-lg-3 mt-3 mt-lg-0 text-decoration-none" onClick={close}>
             Get in Touch
           </a>
         </Navbar.Collapse>
