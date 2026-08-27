@@ -8,7 +8,7 @@ const credentials = [
   { label: 'SAM.gov Status', value: 'Active' },
   { label: 'Business Type', value: 'Small Business · Florida LLC' },
   { label: 'SBA Registered', value: 'Yes' },
-  { label: 'Location', value: 'Winter Garden, FL 34787' },
+  { label: 'Location', value: 'Winter Garden, FL' },
   { label: 'Contract Vehicles', value: 'Micro-Purchase · Simplified Acquisition · Set-Aside' },
 ]
 
@@ -92,7 +92,7 @@ function Capabilities() {
           </Col>
           <Col lg={4} className="d-flex align-items-start justify-content-lg-end mt-4 mt-lg-5">
             <a
-              href="mailto:info@novelatechnologygroup.com?subject=Capabilities Statement Request"
+              href="mailto:info@nouvelatechnologygroup.com?subject=Capabilities Statement Request"
               className="btn-nt-primary text-decoration-none"
               style={{ whiteSpace: 'nowrap' }}
             >
@@ -177,7 +177,7 @@ function Capabilities() {
               </p>
               <div className="d-flex gap-3 justify-content-center flex-wrap">
                 <a
-                  href="mailto:info@novelatechnologygroup.com?subject=Capabilities Statement Request"
+                  href="mailto:info@nouvelatechnologygroup.com?subject=Capabilities Statement Request"
                   className="btn-nt-primary text-decoration-none"
                 >
                   Request Capabilities Statement

@@ -66,7 +66,7 @@ function About() {
             </div>
 
             <div style={{ color: '#94a3b8', fontSize: '0.85rem', lineHeight: 1.8 }}>
-              <div>📍 1052 Narrow Gauge Ct, Winter Garden, FL 34787</div>
+              <div>📍 Winter Garden, FL</div>
               <div>🏢 Florida LLC · SBA Small Business</div>
             </div>
           </Col>

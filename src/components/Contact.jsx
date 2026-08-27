@@ -41,7 +41,7 @@ function Contact() {
       )
       setSent(true)
     } catch (err) {
-      setError('Something went wrong. Please email us directly at info@novelatechnologygroup.com')
+      setError('Something went wrong. Please email us directly at info@nouvelatechnologygroup.com')
     } finally {
       setSending(false)
     }
@@ -65,7 +65,7 @@ function Contact() {
               <div className="ci-icon">📧</div>
               <div className="ci-text">
                 <p>Email</p>
-                <a href="mailto:info@novelatechnologygroup.com">info@novelatechnologygroup.com</a>
+                <a href="mailto:info@nouvelatechnologygroup.com">info@nouvelatechnologygroup.com</a>
               </div>
             </div>
             <div className="contact-info">

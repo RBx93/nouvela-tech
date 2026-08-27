@@ -48,8 +48,8 @@ function Footer() {
           <Col xs={12} sm={4} lg={3} className="text-center text-lg-start">
             <h6>Contact</h6>
             <ul>
-              <li><a href="mailto:info@novelatechnologygroup.com">info@novelatechnologygroup.com</a></li>
-              <li><span style={{ color: '#94a3b8', fontSize: '0.85rem' }}>Winter Garden, FL 34787</span></li>
+              <li><a href="mailto:info@nouvelatechnologygroup.com">info@nouvelatechnologygroup.com</a></li>
+              <li><span style={{ color: '#94a3b8', fontSize: '0.85rem' }}>Winter Garden, FL</span></li>
             </ul>
           </Col>
         </Row>
