@@ -3,8 +3,10 @@
 // Status options: 'live' | 'in_development' | 'planning'
 // `preview` is a static screenshot in public/previews/ — regenerate it when a
 // site's landing page changes. Cards without one fall back to the microlink API.
+// Set `hidden: true` to keep an entry in this file but off the public site —
+// unfinished builds stay out of the portfolio until they are ready to show.
 
-const projects = [
+const allProjects = [
   {
     title: "I Honore Realty",
     desc: "Statewide Florida brokerage site in four languages with browser auto-detect, per-agent profiles and direct contact routing, live MLS-ready listings with filtering and a Zillow-style detail modal, mortgage calculator, and home valuation.",
@@ -76,6 +78,7 @@ const projects = [
     url: "https://blue-wave-090fdef10.7.azurestaticapps.net",
     preview: "/previews/csci-verify.webp",
     status: "in_development",
+    hidden: true,
   },
   {
     title: "CSCI LIMS (cscilab.com)",
@@ -84,7 +87,12 @@ const projects = [
     url: "https://black-island-057c07610.7.azurestaticapps.net",
     preview: "/previews/csci-lims.webp",
     status: "in_development",
+    hidden: true,
   },
 ]
 
+// The site renders only what is not hidden; allProjects keeps the full list.
+const projects = allProjects.filter((p) => !p.hidden)
+
+export { allProjects }
 export default projects
