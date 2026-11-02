@@ -14,6 +14,10 @@ jobs:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
     name: Build and Deploy
+    # Queue production deploys so back-to-back merges don't cancel each other.
+    concurrency:
+      group: ${{ github.event_name == 'push' && 'swa-production' || format('swa-pr-{0}', github.event.pull_request.number) }}
+      cancel-in-progress: false
 
     steps:
       - uses: actions/checkout@v3
