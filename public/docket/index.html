@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Bid Docket | Nouvela</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <style>
+    /* Private owner page, served only to the "owner" role by staticwebapp.config.json. Site palette from custom.scss. */
+    :root {
+      --dark: #06101e;
+      --card: #0d1a2e;
+      --border: #1a2d4a;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --blue: #2563eb;
+      --blue-light: #60a5fa;
+      --gold: #f59e0b;
+      color-scheme: dark;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--dark); color: var(--text);
+      font: 16px/1.55 Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+      padding: 32px max(16px, env(safe-area-inset-right, 0px)) 48px max(16px, env(safe-area-inset-left, 0px));
+    }
+    .wrap { max-width: 760px; margin: 0 auto; display: grid; gap: 28px; }
+    header { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+    .brand { display: flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font-weight: 700; }
+    .brand img { width: 32px; height: 32px; }
+    .signout { color: var(--muted); font-size: 14px; }
+    .eyebrow { color: var(--gold); font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; margin: 0 0 6px; }
+    h1 { font-size: 40px; line-height: 1.1; margin: 0 0 10px; font-weight: 800; text-wrap: balance; }
+    h2 { font-size: 18px; margin: 0 0 12px; font-weight: 700; }
+    p { margin: 0; max-width: 62ch; }
+    .lede { color: var(--muted); }
+    .open {
+      display: inline-block; margin-top: 18px; background: var(--blue); color: #fff; text-decoration: none;
+      font-weight: 700; padding: 12px 22px; border-radius: 8px;
+    }
+    .open:hover { background: #1d4ed8; }
+    a:focus-visible { outline: 2px solid var(--blue-light); outline-offset: 3px; }
+    section { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 20px; }
+    ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+    li { display: grid; gap: 2px; min-width: 0; }
+    li a { color: var(--blue-light); font-weight: 600; text-decoration: none; overflow-wrap: anywhere; }
+    li a:hover { text-decoration: underline; }
+    li span { color: var(--muted); font-size: 14px; }
+    .group { color: var(--muted); font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; margin: 18px 0 10px; }
+    .group:first-of-type { margin-top: 0; }
+    .rules li { display: list-item; list-style: disc; margin-left: 20px; color: var(--text); }
+    footer { color: var(--muted); font-size: 13px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="/"><img src="/favicon.svg" alt="">Nouvela Technology Group</a>
+      <a class="signout" href="/.auth/logout?post_logout_redirect_uri=/">Sign out</a>
+    </header>
+
+    <div>
+      <p class="eyebrow">Owner only</p>
+      <h1>Bid Docket</h1>
+      <p class="lede">State, local and commercial leads, sorted by due date. Mark each one Look at it or Pass in the docket. Claude reads the decisions back and runs a bid triage on every Look at it.</p>
+      <a class="open" href="https://claude.ai/artifact/VZ8NRhTPNo7y1NCL9gk2M9" target="_blank" rel="noopener">Open the docket</a>
+    </div>
+
+    <section>
+      <h2>Where to search</h2>
+      <p class="group">Georgia</p>
+      <ul>
+        <li><a href="https://ssl.doas.state.ga.us/gpr/" target="_blank" rel="noopener">Georgia Procurement Registry</a><span>State agencies and most Georgia cities and counties. Public.</span></li>
+        <li><a href="https://procurement.atlantaregional.org" target="_blank" rel="noopener">Atlanta Regional Commission</a><span>Register and get approved before you can submit.</span></li>
+      </ul>
+      <p class="group">Central Florida</p>
+      <ul>
+        <li><a href="https://procurement.opengov.com/portal/orlando" target="_blank" rel="noopener">City of Orlando (OpenGov)</a><span>Free account turns on email alerts by category.</span></li>
+        <li><a href="https://ocfl.net/VendorServices.aspx" target="_blank" rel="noopener">Orange County vendor services</a><span>Links into OpenGov.</span></li>
+      </ul>
+      <p class="group">Florida statewide</p>
+      <ul>
+        <li><a href="https://vendor.myfloridamarketplace.com/" target="_blank" rel="noopener">MyFloridaMarketPlace</a><span>State agencies. Free vendor account; pick IT, web and GIS categories.</span></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>House rules</h2>
+      <ul class="rules">
+        <li>State, local and commercial work only.</li>
+        <li>Target areas: Central Florida, Metro Atlanta, Florida statewide.</li>
+        <li>Work types: web and software, GIS, IT and admin support. No facilities or construction.</li>
+        <li>Grant-funded local contracts get flagged in the docket. Decide those case by case.</li>
+      </ul>
+    </section>
+
+    <footer>This page is visible only to the owner account.</footer>
+  </div>
+</body>
+</html>
