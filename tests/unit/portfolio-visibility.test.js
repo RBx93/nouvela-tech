@@ -25,3 +25,35 @@ describe('portfolio visibility', () => {
     ])
   })
 })
+
+describe("Edith's Best", () => {
+  // Client as of 2026-11-02. The card points at his live Shopify store; the
+  // redesign is still in progress, so the copy must not claim a finished launch.
+  const card = projects.find((p) => p.title === "Edith's Best")
+
+  it('is on the public portfolio, linking to the live store', () => {
+    expect(card?.url).toBe('https://edithsbest.com')
+    expect(card?.status).toBe('live')
+    expect(card?.preview).toBe('/previews/ediths-best.webp')
+  })
+
+  it('shows in the first six cards, before "Show more"', () => {
+    expect(projects.indexOf(card)).toBeGreaterThanOrEqual(0)
+    expect(projects.indexOf(card)).toBeLessThan(6)
+  })
+
+  it('does not claim the redesign has launched', () => {
+    expect(card?.desc).not.toMatch(/launched|redesigned|rebuilt/i)
+  })
+})
+
+describe('footer client list', () => {
+  it("links Edith's Best", async () => {
+    const { readFileSync } = await import('node:fs')
+    const { fileURLToPath } = await import('node:url')
+    const { dirname, resolve } = await import('node:path')
+    const here = dirname(fileURLToPath(import.meta.url))
+    const footer = readFileSync(resolve(here, '../../src/components/Footer.jsx'), 'utf8')
+    expect(footer).toMatch(/href="https:\/\/edithsbest\.com"[^>]*>Edith's Best</)
+  })
+})
