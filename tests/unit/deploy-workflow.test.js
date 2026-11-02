@@ -8,7 +8,8 @@ import { dirname, resolve } from 'node:path'
 // for it. Production deploys now share one concurrency group that queues
 // instead of canceling, so back-to-back merges deploy one after the other.
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..')
-const yml = readFileSync(resolve(ROOT, '.github/workflows/azure-static-web-apps.yml'), 'utf8')
+// Windows checkouts get CRLF; compare on LF so the test passes everywhere.
+const yml = readFileSync(resolve(ROOT, '.github/workflows/azure-static-web-apps.yml'), 'utf8').replace(/\r\n/g, '\n')
 const buildJob = yml.split(/\n  close_pull_request:/)[0].split(/\n  build_and_deploy:/)[1] || ''
 
 describe('production deploys queue instead of canceling each other', () => {

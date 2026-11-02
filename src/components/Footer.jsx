@@ -56,6 +56,7 @@ function Footer() {
 
         <div className="footer-bottom">
           <p>© {year} Nouvela Technology Group LLC. All rights reserved.</p>
+          <a className="footer-pa" href="/docket/" aria-label="Portal access" title="Portal access" rel="nofollow">PA</a>
         </div>
       </Container>
     </footer>

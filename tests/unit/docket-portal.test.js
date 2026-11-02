@@ -74,9 +74,25 @@ describe('the docket page', () => {
 })
 
 describe('the docket is not advertised', () => {
-  for (const file of ['public/sitemap.xml', 'public/robots.txt', 'public/llms.txt', 'src/components/Navbar.jsx', 'src/components/Footer.jsx']) {
+  for (const file of ['public/sitemap.xml', 'public/robots.txt', 'public/llms.txt', 'src/components/Navbar.jsx']) {
     it(`${file} does not mention it`, () => {
       expect(read(file)).not.toMatch(/docket/i)
     })
   }
+})
+
+describe('the footer has one small PA link to the portal', () => {
+  const footer = read('src/components/Footer.jsx')
+
+  it('links to /docket/ with a plain anchor so Azure serves the locked page', () => {
+    const links = footer.match(/<a [^>]*href="\/docket\/"[^>]*>[^<]*<\/a>/g) || []
+    expect(links).toHaveLength(1)
+    expect(links[0]).toMatch(/>PA<\/a>$/)
+    expect(links[0]).toMatch(/aria-label="Portal access"/)
+    expect(links[0]).toMatch(/rel="nofollow"/)
+  })
+
+  it('never names the docket in visible text', () => {
+    expect(footer.replace(/href="\/docket\/"/, '')).not.toMatch(/docket/i)
+  })
 })
