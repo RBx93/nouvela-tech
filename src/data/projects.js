@@ -40,6 +40,14 @@ const allProjects = [
     status: "live",
   },
   {
+    title: "Edith's Best",
+    desc: "Shopify storefront work for the makers of Triple A Sauce: a story-driven redesign in progress that sends every visitor toward buying the sauce, with checkout wired to the brand's own Shopify store.",
+    tags: ["Shopify", "E-commerce", "SEO/GEO"],
+    url: "https://edithsbest.com",
+    preview: "/previews/ediths-best.webp",
+    status: "live",
+  },
+  {
     title: "Iota Omega Chapter",
     desc: "Fraternity chapter site with Firebase admin portal, live event calendar, member database, and photo archives.",
     tags: ["React 18", "Firebase", "Bootstrap"],

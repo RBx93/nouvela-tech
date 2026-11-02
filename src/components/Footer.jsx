@@ -39,6 +39,7 @@ function Footer() {
               <li><a href="https://thelabteq.org" target="_blank" rel="noopener noreferrer">LabTeQ</a></li>
               <li><a href="https://bassyhandyman.com" target="_blank" rel="noopener noreferrer">Bassy Handyman Co.</a></li>
               <li><a href="https://924project.org" target="_blank" rel="noopener noreferrer">The 924 Project</a></li>
+              <li><a href="https://edithsbest.com" target="_blank" rel="noopener noreferrer">Edith's Best</a></li>
               <li><a href="https://iotaomega1923.com" target="_blank" rel="noopener noreferrer">Iota Omega Chapter</a></li>
               <li><a href="https://www.bryantslawncare.org" target="_blank" rel="noopener noreferrer">Bryant's Lawn Care</a></li>
               <li><a href="https://hubbtech.web.app" target="_blank" rel="noopener noreferrer">HubbTech</a></li>
