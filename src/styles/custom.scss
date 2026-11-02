@@ -853,6 +853,21 @@ body {
     }
   }
 
+  .footer-pa {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: $nt-muted;
+    opacity: 0.6;
+    text-decoration: none;
+    padding: 0.15rem 0.4rem;
+    border: 1px solid $nt-dark-border;
+    border-radius: 3px;
+
+    &:hover,
+    &:focus-visible { opacity: 1; color: $nt-text; }
+  }
+
   .footer-bottom {
     margin-top: 2.5rem;
     padding-top: 1.25rem;
