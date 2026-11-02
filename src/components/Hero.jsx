@@ -22,14 +22,14 @@ function Hero() {
               improve operations and support mission success.
             </p>
             <div className="d-flex gap-3 flex-wrap load-in" style={{ '--i': 2 }}>
-              <a href="#govcon" className="btn-nt-primary text-decoration-none">Government Contracting</a>
+              <a href="#services" className="btn-nt-primary text-decoration-none">Our Services</a>
               <a href="#contact" className="btn-nt-outline text-decoration-none">Get in Touch</a>
             </div>
 
             <div className="hero-stats load-in" style={{ '--i': 3 }}>
               <div className="stat">
-                <div className="stat-value">SAM</div>
-                <div className="stat-label">Active Registrant</div>
+                <div className="stat-value">GIS</div>
+                <div className="stat-label">Geospatial Services</div>
               </div>
               <div className="stat">
                 <div className="stat-value">SBA</div>
@@ -44,7 +44,7 @@ function Hero() {
 
           {/* The right column is deliberately empty. It used to hold a mock
               code window, which read as a developer portfolio and undercut the
-              federal-contracting positioning. The terrain and its survey
+              company positioning. The terrain and its survey
               network now occupy that half. */}
         </Row>
       </Container>

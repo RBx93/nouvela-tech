@@ -68,3 +68,35 @@ describe('the registered street address stays off the public site', () => {
     expect(bad, 'street line at:\n' + bad.join('\n')).toEqual([])
   })
 })
+
+describe('federal contracting stays off the public site', () => {
+  // Robertson's day job does not allow him to be seen federal contracting on
+  // the side, so the site no longer markets Nouvela to federal buyers. State,
+  // local, and commercial work stay. The SAM.gov registration itself is a
+  // separate public record this site does not control.
+  const publicFiles = [...files, join(ROOT, 'public', 'llms.txt')]
+  const federalOffenders = (pattern) => {
+    const bad = []
+    for (const file of publicFiles) {
+      readFileSync(file, 'utf8').split('\n').forEach((line, i) => {
+        if (pattern.test(line)) bad.push(rel(file) + ':' + (i + 1))
+      })
+    }
+    return bad
+  }
+
+  it('does not print the UEI, CAGE code, or SAM.gov status', () => {
+    const bad = federalOffenders(/H3Q5W9SYFF44|11UF7|\bUEI\b|\bCAGE\b|SAM\.gov/)
+    expect(bad, 'federal identifier at:\n' + bad.join('\n')).toEqual([])
+  })
+
+  it('does not market federal work', () => {
+    const bad = federalOffenders(/federal|NAICS|set-aside|micro-purchase|simplified acquisition/i)
+    expect(bad, 'federal positioning at:\n' + bad.join('\n')).toEqual([])
+  })
+
+  it('has no Gov Contracting section or link', () => {
+    const bad = federalOffenders(/GovContracting|#govcon|Gov Contracting/)
+    expect(bad, 'gov contracting section at:\n' + bad.join('\n')).toEqual([])
+  })
+})

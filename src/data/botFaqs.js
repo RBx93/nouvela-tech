@@ -11,7 +11,7 @@ export const THEME = {
 }
 
 export const GREETING =
-  'Hi! I\'m the Nouvela Bot. Ask me about our services, our federal registrations, or starting a project.'
+  'Hi! I\'m the Nouvela Bot. Ask me about our services, our work, or starting a project.'
 
 // Where the bot hands a visitor to a human.
 // Email only: this site carries no published phone number, so the bot
@@ -27,20 +27,8 @@ export const faqs = [
     a: 'Software engineering, GIS services, program support, and technical services for government and commercial clients.',
   },
   {
-    q: 'Are you a registered federal contractor?',
-    a: 'Yes. Nouvela Technology Group LLC is a Florida LLC and an SBA-registered small business with an active SAM.gov registration.',
-  },
-  {
-    q: 'What is your UEI?',
-    a: 'Our Unique Entity Identifier is H3Q5W9SYFF44.',
-  },
-  {
-    q: 'What is your CAGE code?',
-    a: 'Our CAGE / NCAGE code is 11UF7.',
-  },
-  {
-    q: 'Which NAICS codes do you hold?',
-    a: '238290 for other building equipment contractors, 236220 for commercial and institutional building construction, 541370 for geospatial and GIS services, and 561110 for office administrative services.',
+    q: 'What kind of business is Nouvela?',
+    a: 'Nouvela Technology Group LLC is a Florida LLC and an SBA-registered small business.',
   },
   {
     q: 'Can you work as a subcontractor?',
