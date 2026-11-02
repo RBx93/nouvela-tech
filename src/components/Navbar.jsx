@@ -32,7 +32,6 @@ function NouvelaNavbar() {
         <Navbar.Toggle aria-controls="nt-nav" className="ms-auto" />
         <Navbar.Collapse id="nt-nav">
           <Nav className="ms-auto">
-            <Nav.Link href="/#govcon" onClick={close}>Gov Contracting</Nav.Link>
             <Nav.Link as={Link} to="/capabilities" onClick={close}>Capabilities</Nav.Link>
             <Nav.Link href="/#services" onClick={close}>Services</Nav.Link>
             <Nav.Link href="/#portfolio" onClick={close}>Portfolio</Nav.Link>

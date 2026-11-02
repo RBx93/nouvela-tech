@@ -47,14 +47,14 @@ const services = [
     icon: '📋',
     title: 'Administrative & Program Support',
     group: 'support',
-    desc: 'Structured support services that help teams stay organized, compliant, and efficient across federal and commercial environments.',
+    desc: 'Structured support services that help teams stay organized, compliant, and efficient across public and commercial environments.',
     bullets: ['Scheduling & coordination', 'Documentation support', 'Data entry & records management', 'Program tracking'],
   },
   {
     icon: '🗺️',
     title: 'Geospatial Services (GIS)',
     group: 'support',
-    desc: 'Mapping, spatial analysis, geospatial data organization, and GIS portal maintenance for federal and environmental programs.',
+    desc: 'Mapping, spatial analysis, geospatial data organization, and GIS portal maintenance for public-sector and environmental programs.',
     bullets: ['GIS mapping & analysis', 'Spatial data management', 'GIS portal development', 'Environmental data reporting'],
   },
   {
@@ -73,7 +73,7 @@ const services = [
   },
 ]
 
-// Two capability groupings rather than a flat list of ten. Federal buyers scan
+// Two capability groupings rather than a flat list of ten. Buyers scan
 // for capability areas, not an inventory — ten equal cards makes them read
 // everything or nothing.
 const GROUPS = [

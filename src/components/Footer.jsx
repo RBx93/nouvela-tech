@@ -24,7 +24,6 @@ function Footer() {
             <h6>Navigate</h6>
             <ul>
               <li><a href="#hero">Home</a></li>
-              <li><a href="#govcon">Gov Contracting</a></li>
               <li><a href="#services">Services</a></li>
               <li><a href="#portfolio">Portfolio</a></li>
               <li><a href="#about">About</a></li>
@@ -56,10 +55,6 @@ function Footer() {
 
         <div className="footer-bottom">
           <p>© {year} Nouvela Technology Group LLC. All rights reserved.</p>
-          <div style={{ textAlign: 'right' }}>
-            <p style={{ margin: 0 }}>UEI: H3Q5W9SYFF44</p>
-            <p style={{ margin: 0 }}>CAGE / NCAGE: 11UF7</p>
-          </div>
         </div>
       </Container>
     </footer>

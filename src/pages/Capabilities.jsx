@@ -3,23 +3,9 @@ import { Link } from 'react-router-dom'
 
 const credentials = [
   { label: 'Legal Name', value: 'Nouvela Technology Group, LLC' },
-  { label: 'UEI', value: 'H3Q5W9SYFF44' },
-  { label: 'CAGE / NCAGE', value: '11UF7' },
-  { label: 'SAM.gov Status', value: 'Active' },
   { label: 'Business Type', value: 'Small Business · Florida LLC' },
   { label: 'SBA Registered', value: 'Yes' },
   { label: 'Location', value: 'Winter Garden, FL' },
-  { label: 'Contract Vehicles', value: 'Micro-Purchase · Simplified Acquisition · Set-Aside' },
-]
-
-const naicsCodes = [
-  { code: '541511', title: 'Custom Computer Programming Services' },
-  { code: '541512', title: 'Computer Systems Design Services' },
-  { code: '518210', title: 'Data Processing, Hosting & Related Services' },
-  { code: '541370', title: 'Geospatial Information Services (GIS)' },
-  { code: '561110', title: 'Office Administrative Services' },
-  { code: '238290', title: 'Other Building Equipment Contractors' },
-  { code: '236220', title: 'Commercial and Institutional Building Construction' },
 ]
 
 const competencies = [
@@ -49,8 +35,8 @@ const competencies = [
     icon: '📋',
     title: 'Administrative Program Support',
     points: [
-      'Federal program management and scheduling',
-      'TAP office administrative support',
+      'Program management and scheduling',
+      'Office coordination and administrative support',
       'Documentation, reporting, and compliance',
       'Office administrative services',
     ],
@@ -79,15 +65,14 @@ function Capabilities() {
               ← Back to Home
             </Link>
             <div className="section-eyebrow" style={{ color: '#60a5fa', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>
-              Government Contracting
+              What We Do
             </div>
             <h1 style={{ fontWeight: 800, fontSize: 'clamp(2rem, 4vw, 3rem)', color: '#fff', marginBottom: '1rem' }}>
               Capabilities Overview
             </h1>
             <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: 1.75, maxWidth: '620px' }}>
-              Nouvela Technology Group LLC is an SBA-registered small business and active SAM.gov registrant
-              seeking micro-purchase, simplified acquisition, and small business set-aside opportunities
-              across federal, state, and local government agencies.
+              Nouvela Technology Group LLC is a Florida small business delivering software, GIS, program
+              support, and technical services to commercial clients and state and local organizations.
             </p>
           </Col>
           <Col lg={4} className="d-flex align-items-start justify-content-lg-end mt-4 mt-lg-5">
@@ -112,23 +97,6 @@ function Capabilities() {
                 <div key={i} className="cap-data-row">
                   <span className="cap-data-label">{c.label}</span>
                   <span className="cap-data-value">{c.value}</span>
-                </div>
-              ))}
-            </div>
-          </Col>
-        </Row>
-
-        {/* NAICS */}
-        <Row className="mb-5">
-          <Col>
-            <h5 style={{ color: '#94a3b8', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1.25rem' }}>
-              NAICS Codes
-            </h5>
-            <div className="naics-list" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '0.75rem' }}>
-              {naicsCodes.map((n, i) => (
-                <div className="naics-item" key={i}>
-                  <span className="naics-code">{n.code}</span>
-                  <span className="naics-title">{n.title}</span>
                 </div>
               ))}
             </div>

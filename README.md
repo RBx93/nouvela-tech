@@ -1,7 +1,9 @@
 # Nouvela Technology Group — nouvelatechnologygroup.com
 
-The company's own site. Federal contractor first, small-business web and software
-shop second — the copy and section order reflect that ordering deliberately.
+The company's own site: small-business software, web, GIS, and program support
+for commercial clients and state and local organizations. Federal contracting was
+taken off the site on 2026-11-02 and must not come back; `house-style.test.js`
+guards it.
 
 - **Live:** https://nouvelatechnologygroup.com
 - **Host:** Azure Static Web Apps, deployed by GitHub Actions on push to `main`
@@ -28,12 +30,9 @@ npm run lint
 
 ## Sections
 
-`src/components/` — Hero, Services, **GovContracting**, **GeospatialNetwork**,
+`src/components/` — Hero, Services, **GeospatialNetwork**,
 Portfolio, About, Contact, Navbar, Footer.
 
-GovContracting and GeospatialNetwork carry the federal positioning (UEI
-`H3Q5W9SYFF44`, CAGE `11UF7`, the NAICS codes). Those identifiers have to match
-SAM.gov exactly — check before editing them.
 
 ## Contact form
 
